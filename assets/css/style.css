@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parte2{
+    background: blue;
+}
+.parte1{
+    background-color: aqua;
+}
+
+#formulario{
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-radius: 4px;
+    box-sizing: 3px;
+}
+
+
