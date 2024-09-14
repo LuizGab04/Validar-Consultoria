@@ -2,19 +2,27 @@
     margin: 0;
     padding: 0;
 }
-.parte2{
-    background: blue;
+#parte1{
+    background-color: #000822;
 }
-.parte1{
-    background-color: aqua;
+#parte2{
+    background-color: #EEEEEE;
 }
-
+#parte3{
+    background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
+}
 #formulario{
     border-style: solid;
     border-width: 2px;
     border-color: red;
     border-radius: 4px;
     box-sizing: 3px;
+}
+#divBotoes{
+    background-color: #000316;
+}
+#insta, #linke{
+    color: rgb(255, 255, 255);
 }
 
 
