@@ -2,27 +2,53 @@
     margin: 0;
     padding: 0;
 }
-#parte1{
+#cabecalho {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px; 
+    height: 50px;
     background-color: #000822;
+    border-color: red;
+}
+
+#logo img {
+    width: 150px; 
+    height: auto; 
+}
+
+#parte1{
+    background-image: url(../images/image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1256px; 
+    height: 500px;
 }
 #parte2{
     background-color: #EEEEEE;
 }
 #parte3{
     background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 580px;
 }
 #formulario{
     border-style: solid;
-    border-width: 2px;
     border-color: red;
-    border-radius: 4px;
-    box-sizing: 3px;
+    border-radius: 150px;
 }
 #divBotoes{
     background-color: #000316;
 }
 #insta, #linke{
     color: rgb(255, 255, 255);
+}
+
+footer{
+    background-color: #000316;
 }
 
 

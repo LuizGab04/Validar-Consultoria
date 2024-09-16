@@ -16,19 +16,27 @@
 </head>
 
 <body>
-    <header id="cabecalho" class="">
-        <img src="" alt="">
-        <h1>validarconsult@gmail.com</h1>
+    <header>
+        <div id="cabecalho" class="">
+            <div id="logo">
+                <img src="assets\images\logou.png">
+            </div>
+
+            <div id="emailHeader">
+                <p>validarconsult@gmail.com</p>
+            </div>
+        </div>
     </header>
+
     <div id="divMeio">
-        <div id="parte1" class="container p-5">
+        <div id="parte1" class="">
             <h1>Valide sua empresa</h1>
             <p>com a melhor equipe de consultoria financeira do mercado</p>
         </div>
 
         <div id="parte2">
             <h1>se a sua empresa precisa de...</h1>
-            <div id="representacao">
+            <div id="representacao" class="">
                 <h1>REESTRUTURAÇÃO DE PASSIVOS</h1>
             </div>
             <div id="reestruturacao">
@@ -45,32 +53,32 @@
             </div>
         </div>
 
-        <div id="parte3" class="d-flex">
+        <div id="parte3" class="">
             <form action="https://formsubmit.co/luizgfs1304@gmail.com" method="POST">
-                <div id="formulario" class="p-5 justify-content-center">
+                <div id="formulario" class="justify-content-center">
                     <h1 class="justify-content-center d-flex">CADASTRO</h1>
-                    <div id="cadastro" class="row mb-3 g-3 d-flex justify-content-center">
+                    <div id="cadastro" class="row mb-3 g-3 justify-content-center">
                         <div class="col-5">
                             <input type="text" class="form-control" placeholder="NOME" required>
                         </div>
                         <div class="col-2">
                             <input type="text" class="form-control" placeholder="ESTADO" required>
                         </div>
-                        <div id="cadastro" class="row mb-2 g-2 d-flex justify-content-center">
+                        <div id="cadastro" class="row mb-2 g-2 justify-content-center">
                             <div class="col-7">
-                                <input type="text" class="form-control" placeholder="EMAIL CORPORATIVO" required>
+                                <input type="email" class="form-control" placeholder="EMAIL CORPORATIVO" required>
                             </div>
                         </div>
-                        <div id="cadastro" class="row mb-3 g-2 d-flex justify-content-center">
+                        <div id="cadastro" class="row mb-3 g-2 justify-content-center">
                             <div class="col-1">
                                 <input type="text" id="ddd" class="form-control" placeholder="DDD" pattern="[0-9]{2}"
                                     required>
                             </div>
                             <div class="col-6">
-                                <input type="text" id="celular" class="form-control" placeholder="CELULAR" required>
+                                <input type="tel" id="telefone" class="form-control" placeholder="CELULAR" required>
                             </div>
                         </div>
-                        <div id="cadastro" class="row mb-1 g-2 d-flex justify-content-center">
+                        <div id="cadastro" class="row mb-1 g-2 justify-content-center">
                             <div class="col-5">
                                 <input type="text" id="cargo" class="form-control" placeholder="CARGO" required>
                             </div>
@@ -80,7 +88,7 @@
                             </div>
                         </div>
                         <div id="botaoEnviar" class="d-flex justify-content-center">
-                        <button type=" submit" class="btn btn-warning">FALE COM UM ESPECIALISTA</button>
+                            <button type="submit" class="btn btn-warning">FALE COM UM ESPECIALISTA</button>
                         </div>
                     </div>
                 </div>
@@ -99,17 +107,36 @@
         </div>
     </footer>
     <script>
+        const telefone = document.getElementById('telefone').value;
+        console.log()
+        const telefoneRegex = /^(\d{2})\s\d{4,5}-\d{4}$/; // Ex: (11) 91234-5678
+
+
+        if (!telefoneRegex.test(telefone)) {
+            const telefoneInput = document.getElementById('telefone');
+            const erro = document.createElement('div');
+            erro.className = 'error';
+            erro.textContent = 'Por favor, insira um número de telefone válido no formato (XX) XXXXX-XXXX.';
+            telefoneInput.parentNode.appendChild(erro);
+        } else {
+            alert('Formulário enviado com sucesso!');
+        }
+        // Aqui você pode adicionar código para realmente enviar o formulário se necessário
+        // document.querySelector('form').submit(); // Descomente se for para enviar
+
+
+
         (() => {
-            'use strict';
+            'use strict'
             const forms = document.querySelectorAll('.needs-validation');
             Array.from(forms).forEach(form => {
                 form.addEventListener('submit', event => {
                     if (!form.checkValidity()) {
-                        event.preventDefault();
-                        event.stopPropagation();
+                        event.preventDefault()
+                        event.stopPropagation()
                     }
                     form.classList.add('was-validated');
-                }, false);
+                }, false)
             });
         })();
     </script>
