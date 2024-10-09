@@ -1,33 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 #cabecalho {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
     padding: 10px; 
-    height: 50px;
+    height: 65px;
     background-color: #000822;
-    border-color: red;
+    border-bottom: 2px solid #ffffff; /* Linha branca na parte inferior */
+}
+
+
+#emailHeader h5{
+    color: #FFF;
+    padding-right: 60px;
 }
 
 #logo img {
-    width: 150px; 
-    height: auto; 
+    width: 125px; 
+    height: auto;
+    padding-top: 10px; 
+}
+#nome-logo {
+    color: #FFF;
+    padding-top: 5px;
+    padding-left: 10px;
 }
 
 #parte1{
-    background-image: url(../images/image.png);
+    background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 1256px; 
     height: 500px;
 }
-#parte2{
-    background-color: #EEEEEE;
+
+
+#parte1 h2, #parte1 h3 {
+    color: #FFF;
 }
+#container{
+    padding-top: 245px;
+    padding-left: 115px;
+}
+
+
+#parte2{
+    background-image: linear-gradient(to bottom, transparent 5%, #ffffff 80%), url(../images/imagem-pt2.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
 #parte3{
     background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
     background-size: cover;
