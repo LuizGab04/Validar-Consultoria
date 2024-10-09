@@ -1,37 +1,43 @@
+/*Primeira parte da pagina */
 
 #cabecalho {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
     height: 65px;
     background-color: #000822;
-    border-bottom: 2px solid #ffffff; /* Linha branca na parte inferior */
+    border-bottom: 2px solid #ffffff;
 }
 
+#logo-container {
+    display: flex;
+    align-items: center;
+}
 
-#emailHeader h5{
+#emailHeader h5 {
     color: #FFF;
     padding-right: 60px;
 }
 
 #logo img {
-    width: 125px; 
+    width: 125px;
     height: auto;
-    padding-top: 10px; 
-}
-#nome-logo {
-    color: #FFF;
-    padding-top: 5px;
-    padding-left: 10px;
+    padding-top: 10px;
 }
 
-#parte1{
-    background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png);
+#nome-logo {
+    color: #FFF;
+    margin-left: -43px;
+    padding-top: 7px;
+}
+
+#parte1 {
+    background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png); /*Linear-gradient é uma camada para efeitos de fadeIn*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 1256px; 
+    width: 1256px;
     height: 500px;
 }
 
@@ -39,13 +45,17 @@
 #parte1 h2, #parte1 h3 {
     color: #FFF;
 }
-#container{
+
+#container-pt1 {
     padding-top: 245px;
     padding-left: 115px;
 }
+/* Fim da primeira parte da pagina */
 
+/*/////////////////////////////////////////*/
 
-#parte2{
+/*Segunda parte da pagina */
+#parte2 {
     background-image: linear-gradient(to bottom, transparent 5%, #ffffff 80%), url(../images/imagem-pt2.avif);
     background-size: cover;
     background-position: center;
@@ -54,27 +64,35 @@
     height: 100%;
 }
 
-#parte3{
+#container-pt2{
+    padding-top: 245px;
+    padding-left: 115px;
+}
+
+
+#parte3 {
     background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 580px;
 }
-#formulario{
+
+#formulario {
     border-style: solid;
     border-color: red;
     border-radius: 150px;
 }
-#divBotoes{
+
+#divBotoes {
     background-color: #000316;
 }
-#insta, #linke{
+
+#insta,
+#linke {
     color: rgb(255, 255, 255);
 }
 
-footer{
+footer {
     background-color: #000316;
 }
-
-
