@@ -81,7 +81,7 @@ body {
 
 /*Segunda parte da pagina */
 #parte2 {
-    background-image: linear-gradient(cover, transparent 100%, #ffffff 80%), url(../images/imagem-pt2.avif);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.70) 100%), url(../images/imagem-pt2.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ body {
 
 /*/////////////////////////////////////////*/
 #parte3 {
-    background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
+    background-image: linear-gradient(to bottom, rgba(101, 142, 194, 0.95) 0%, rgba(101, 142, 194, 0.7) 100%), url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,8 +135,10 @@ body {
 
 #formulario {
     border-style: solid;
-    border-color: red;
-    border-radius: 150px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #divBotoes {
@@ -149,5 +151,11 @@ body {
 }
 
 footer {
-    background-color: #000316;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 65px;
+    background-color: #000822;
+    border-bottom: 2px solid #ffffff;
 }
