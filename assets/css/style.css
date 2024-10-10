@@ -1,6 +1,10 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html,
+body {
     overflow-x: hidden !important;
-  }
+}
+
 
 /*Primeira parte da pagina */
 
@@ -14,14 +18,21 @@ html, body {
     border-bottom: 2px solid #ffffff;
 }
 
+#botoes-pt1 {
+    align-items: center;
+    display: flex;
+}
+
+
 #logo-container {
     display: flex;
     align-items: center;
 }
 
-#emailHeader h5 {
+#emailHeader a {
     color: #FFF;
     padding-right: 60px;
+    text-decoration: none;
 }
 
 #logo img {
@@ -37,7 +48,8 @@ html, body {
 }
 
 #parte1 {
-    background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png); /*Linear-gradient é uma camada para efeitos de fadeIn*/
+    background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png);
+    /*Linear-gradient é uma camada para efeitos de fadeIn*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +58,15 @@ html, body {
 }
 
 
-#parte1 h2, #parte1 h3 {
+#parte1 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: -7px;
+    color: #FFFF;
+}
+
+#parte1 h3 {
+    font-family: 'Montserrat', sans-serif;
     color: #FFF;
 }
 
@@ -54,26 +74,56 @@ html, body {
     padding-top: 245px;
     padding-left: 115px;
 }
+
 /* Fim da primeira parte da pagina */
 
 /*/////////////////////////////////////////*/
 
 /*Segunda parte da pagina */
 #parte2 {
-    background-image: linear-gradient(to bottom, transparent 5%, #ffffff 80%), url(../images/imagem-pt2.avif);
+    background-image: linear-gradient(cover, transparent 100%, #ffffff 80%), url(../images/imagem-pt2.avif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 500px;
+    height: 100%;
 }
 
-#container-pt2{
-    padding-top: 245px;
-    padding-left: 115px;
+#container-pt2 {
+    padding-bottom: 150px;
+    padding-left: calc(100% - 560px);
+    margin-right: -150px;
+}
+
+#resumo-pt2 {
+    padding-top: 60px;
+    color: #2d4283;
+    margin-bottom: 50px;
+}
+
+#categorias{
+    padding-top: 0px;
+}
+#representacao,
+#reestruturacao,
+#capitacao,
+#reestruturacaoCarteira,
+#reestruturacaoAdm {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #2d4283;
+    height: 70px;
 }
 
 
+#categorias img {
+    width: 100px;
+    padding-top: 10px;
+    margin-left: -25px;
+}
+
+/*/////////////////////////////////////////*/
 #parte3 {
     background-image: url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
     background-size: cover;
