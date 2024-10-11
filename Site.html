@@ -18,6 +18,10 @@
     .w-140 {
         width: 140px;
     }
+
+    #text-baixopt2 {
+        margin-top: -8px;
+    }
 </style>
 
 <body>
@@ -35,7 +39,7 @@
 
             <div id="emailHeader">
                 <a href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
-                    target="_blank"><i class="bi bi-whatsapp">&nbsp;&nbsp;Fale conosco</i></a>
+                    target="_blank"><i class="bi bi-whatsapp">&nbsp;<strong>Fale conosco</strong></i></a>
             </div>
         </div>
     </header>
@@ -57,8 +61,14 @@
     <div id="parte2">
         <div id="container-pt2">
             <div id="resumo-pt2">
-                <h6><strong>SE SUA EMPRESA PRECISA DE...</strong><br>
-                    aaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaa<br>aaaaaaa</h6>
+                <div id="text-cimapt2">
+                    <h5><strong>SE A SUA EMPRESA PRECISA DE...</strong><br></h5>
+                </div>
+                <div id="text-baixopt2">
+                    <h6>Um resumo sobre os problemas mais<br>enfrentados pelos clientes, de maneira que<br>a dor deles
+                        fique
+                        exposta<br>aaaaaaa</h6>
+                </div>
             </div>
             <div id="categorias" class="container mb-4">
 
@@ -94,7 +104,9 @@
         <div id="container-form">
             <form action="https://formsubmit.co/luizgfs1304@gmail.com" method="POST">
                 <div id="formulario" class="justify-content-center">
-                    <h1 class="justify-content-center d-flex">CADASTRO</h1>
+                    <div id="cadastro">
+                        <h1 class="justify-content-center d-flex">CADASTRO</h1>
+                    </div>
                     <div id="cadastro" class="row mb-3 g-3 justify-content-center">
                         <div class="col-5">
                             <input type="text" name="nome" class="form-control" placeholder="NOME" required>
@@ -123,7 +135,7 @@
                                 <input type="text" name="cargo" id="cargo" class="form-control" placeholder="CARGO"
                                     required>
                             </div>
-                            <div class="col-2">
+                            <div class="row mb-3 g-2 justify-content-center">
                                 <input type="text" name="faturamento" id="faturamento" class="form-control"
                                     placeholder="FATURAMENTO" required>
                             </div>
@@ -138,7 +150,7 @@
     </div>
 
     <footer>
-        <div id="cabecalho">
+        <div id="rodape">
             <div id="logo-container">
                 <div id="logo">
                     <img src="assets\images\logou.png">
@@ -148,12 +160,19 @@
                     <h5>VALIDAR<br>CONSULTORIA</h5>
                 </div>
             </div>
-            <div id="divBotoes-link">
-                <a id="insta" href="https://www.instagram.com/validarconsultoria/" target="_blank"><i
-                        class="bi bi-instagram"></i></a>
-                <a id="linke"
-                    href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/?originalSubdomain=br"
-                    target="_blank"><i class="bi bi-linkedin"></i></a>
+            <div id="container-footer-esquerda">
+                <div id="contat">
+                    <p><strong>CONTATE-NOS</strong></p>
+                </div>
+                <div id="links">
+                    <a id="insta" href="https://www.instagram.com/validarconsultoria/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a id="linke"
+                        href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/?originalSubdomain=br"
+                        target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a id="zap" href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
+                        target="_blank"><i class="bi bi-whatsapp"></i></a>
+                </div>
             </div>
         </div>
     </footer>
