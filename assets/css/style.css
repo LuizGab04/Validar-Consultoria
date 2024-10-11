@@ -90,7 +90,7 @@ body {
 }
 
 #container-pt2 {
-    padding-bottom: 150px;
+    padding-bottom: 60px;
     padding-left: calc(100% - 560px);
     margin-right: -150px;
 }
@@ -131,6 +131,10 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     height: 500px;
+}
+
+#container-form{
+    padding-top: 50px;
 }
 
 #formulario {
