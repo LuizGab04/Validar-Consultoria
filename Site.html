@@ -13,16 +13,57 @@
         defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<style>
-    .w-140 {
-        width: 140px;
-    }
 
-    #text-baixopt2 {
-        margin-top: -8px;
-    }
-</style>
+    <style>
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-group {
+            border-color: #ffffff;
+            outline: none;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .w-140 {
+            width: 140px;
+        }
+
+        #text-baixopt2 {
+            margin-top: -8px;
+        }
+
+        #container-formulario {
+            padding-top: 40px;
+        }
+    </style>
+</head>
 
 <body>
     <header>
@@ -33,7 +74,7 @@
                 </div>
 
                 <div id="nome-logo">
-                    <h5>VALIDAR<br>CONSULTORIA</h5>
+                    <h5><strong>VALIDAR<br>CONSULTORIA</strong></h5>
                 </div>
             </div>
 
@@ -60,20 +101,29 @@
 
     <div id="parte2">
         <div id="container-pt2">
-            <div id="resumo-pt2">
-                <div id="text-cimapt2">
-                    <h5><strong>SE A SUA EMPRESA PRECISA DE...</strong><br></h5>
+            <div id="imgs-parte2">
+                <div id="logo-p">
+                    <img src="assets\images\p-validar.png">
                 </div>
-                <div id="text-baixopt2">
-                    <h6>Um resumo sobre os problemas mais<br>enfrentados pelos clientes, de maneira que<br>a dor deles
-                        fique
-                        exposta<br>aaaaaaa</h6>
+
+                <div id="logo-grande">
+                    <img src="assets\images\logo-grande.png">
                 </div>
             </div>
-            <div id="categorias" class="container mb-4">
-
-                <div class="rounded-end">
-                    <div dir="ltr" id="representacao" class="mb-5">
+            <div id="info-validar" class="container mb-4">
+                <div id="resumo-pt2">
+                    <div id="text-cimapt2">
+                        <h5><strong>SE A SUA EMPRESA PRECISA DE...</strong><br></h5>
+                    </div>
+                    <div id="text-baixopt2">
+                        <h6>Um resumo sobre os problemas mais<br>enfrentados pelos clientes, de maneira que<br>a dor
+                            deles
+                            fique
+                            exposta<br>aaaaaaa</h6>
+                    </div>
+                </div>
+                <div id="categorias">
+                    <div id="representacao" class="mb-5">
                         <img src="assets\images\img_2.png">
                         <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
                     </div>
@@ -81,7 +131,7 @@
                         <img src="assets\images\img_1.png">
                         <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
                     </div>
-                    <div dir="ltr" id="capitacao" class="mb-5">
+                    <div id="capitacao" class="mb-5">
                         <img src="assets\images\img_3.png">
                         <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
                     </div>
@@ -94,61 +144,57 @@
                         <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
-
-
-    <div id="parte3" class="">
-        <div id="container-form">
-            <form action="https://formsubmit.co/luizgfs1304@gmail.com" method="POST">
-                <div id="formulario" class="justify-content-center">
+    <div id="parte3">
+        <div id="container-formulario">
+            <div id="formulario">
+                <h3>CADASTRO</h3>
+                <form>
                     <div id="cadastro">
-                        <h1 class="justify-content-center d-flex">CADASTRO</h1>
-                    </div>
-                    <div id="cadastro" class="row mb-3 g-3 justify-content-center">
-                        <div class="col-5">
-                            <input type="text" name="nome" class="form-control" placeholder="NOME" required>
+                        <div class="form-group">
+                            <div id="form-nome">
+                                <input type="text" name="nome" placeholder="NOME" required>
+                            </div>
+                            <div id="form-estado">
+                                <input type="text" name="estado" placeholder="ESTADO" required>
+                            </div>
                         </div>
-                        <div class="col-2">
-                            <input type="text" name="estado" class="form-control" placeholder="ESTADO" required>
+
+                        <div class="form-group">
+                            <div id="form-email">
+                                <input type="email" name="email" placeholder="EMAIL CORPORATIVO" required>
+                            </div>
                         </div>
-                        <div class="row mb-2 g-2 justify-content-center">
-                            <div class="col-7">
-                                <input type="email" name="email" class="form-control" placeholder="EMAIL CORPORATIVO"
+
+                        <div class="form-group">
+                            <div id="form-ddd">
+                                <input type="text" name="ddd" id="ddd" placeholder="DDD" pattern="[0-9]{2}" required>
+                            </div>
+                            <div id="form-telefone">
+                                <input type="tel" name="telefone" id="telefone" placeholder="CELULAR" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div id="form-cargo">
+                                <input type="text" name="cargo" id="cargo" placeholder="CARGO" required>
+                            </div>
+                            <div id="form-faturamento">
+                                <input type="text" name="faturamento" id="faturamento" placeholder="FATURAMENTO"
                                     required>
                             </div>
                         </div>
-                        <div class="row mb-3 g-2 justify-content-center">
-                            <div class="col-1">
-                                <input type="text" name="ddd" id="ddd" class="form-control" placeholder="DDD"
-                                    pattern="[0-9]{2}" required>
-                            </div>
-                            <div class="col-6">
-                                <input type="tel" name="telefone" id="telefone" class="form-control"
-                                    placeholder="CELULAR" required>
-                            </div>
-                        </div>
-                        <div class="row mb-1 g-2 justify-content-center">
-                            <div class="col-5">
-                                <input type="text" name="cargo" id="cargo" class="form-control" placeholder="CARGO"
-                                    required>
-                            </div>
-                            <div class="row mb-3 g-2 justify-content-center">
-                                <input type="text" name="faturamento" id="faturamento" class="form-control"
-                                    placeholder="FATURAMENTO" required>
-                            </div>
-                        </div>
-                        <div id="botaoEnviar" class="d-flex justify-content-center">
+                        <div id="botaoEnviar">
                             <button type="submit" class="btn btn-warning">FALE COM UM ESPECIALISTA</button>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-
     <footer>
         <div id="rodape">
             <div id="logo-container">
@@ -157,7 +203,7 @@
                 </div>
 
                 <div id="nome-logo">
-                    <h5>VALIDAR<br>CONSULTORIA</h5>
+                    <h5><strong>VALIDAR<br>CONSULTORIA</strong></h5>
                 </div>
             </div>
             <div id="container-footer-esquerda">
@@ -170,11 +216,13 @@
                     <a id="linke"
                         href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/?originalSubdomain=br"
                         target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a id="zap" href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
+                    <a id="zap"
+                        href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
                         target="_blank"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
+
     </footer>
 </body>
 
