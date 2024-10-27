@@ -1,4 +1,4 @@
-document.getElementById('form-cnpj').addEventListener('submit', async function (event) {
+/*document.getElementById('form-cnpj').addEventListener('submit', async function (event) {
     event.preventDefault();  
 
     const cnpj = document.getElementById('cnpj').value;
@@ -18,7 +18,7 @@ document.getElementById('form-cnpj').addEventListener('submit', async function (
 });
 
 
-function validarCNPJ(cnpj) {
+/*function validarCNPJ(cnpj) {
     cnpj = cnpj.replace(/[^\d]+/g, '');
 
     if (cnpj.length !== 14) return false;
@@ -56,7 +56,7 @@ function validarCNPJ(cnpj) {
 }
 
 
-async function consultarCNPJ(cnpj) {
+/*async function consultarCNPJ(cnpj) {
     const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj.replace(/[^\d]+/g, '')}`;
 
     try {
@@ -77,4 +77,6 @@ async function consultarCNPJ(cnpj) {
         console.error('Erro:', error);
         return null;
     }
-}
+
+
+}*/
