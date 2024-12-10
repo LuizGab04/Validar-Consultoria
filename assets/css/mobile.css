@@ -1,0 +1,11 @@
+/* CSS para fundo rosa e tela em branco */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #FF66B2; /* Cor de fundo rosa */
+    color: #000000; /* Cor do texto em preto */
+    font-family: Arial, sans-serif; /* Fonte simples para o texto */
+}
+

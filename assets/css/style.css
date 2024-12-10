@@ -225,3 +225,11 @@ RODAPÉ
     height: 100%;
     background-color: #000822;
 }
+
+
+@media (max-width: 768px){
+
+body{
+    background-color: #000;
+}
+}
