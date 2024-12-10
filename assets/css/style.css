@@ -18,6 +18,12 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
+@media (max-width: 768px) {
+    #cabecalho {
+        width: 100% !important
+    }
+}
+
 #botoes-pt1 {
     align-items: center;
     display: flex;
@@ -57,6 +63,11 @@ body {
     height: 500px;
 }
 
+@media (max-width: 768px) {
+    #parte1 {
+        width: 100% !important
+    }
+}
 
 #parte1 h2 {
     font-family: 'Montserrat', sans-serif;
@@ -86,6 +97,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-width: 570px;
+}
+@media (max-width: 768px) {
+    #parte2 {
+        width: 100% !important
+    }
 }
 
 #text-baixopt2 {
@@ -137,7 +153,9 @@ body {
     max-width: 800px;
     min-width: 230px;
 }
+
 @media (max-width: 768px) {
+
     #logo-grande img,
     #logo-p img {
         display: none;
@@ -176,6 +194,11 @@ body {
     height: 100%;
     text-align: -webkit-center;
     min-width: 570px;
+}
+@media (max-width: 768px) {
+    #parte3 {
+        width: 100% !important
+    }
 }
 
 #formulario {
