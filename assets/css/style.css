@@ -85,7 +85,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-width: 520px;
+    min-width: 570px;
 }
 
 #text-baixopt2 {
@@ -108,7 +108,7 @@ body {
 #categorias {
     padding-top: 10px;
     padding-left: 30px;
-    min-width: 540px;
+    min-width: 520px;
 }
 
 #representacao,
