@@ -104,7 +104,7 @@
             outline: none;
         }
 
-        .form-group input {
+        .form-group select {
             width: 100%;
             padding: 10px;
             border-radius: 10px;
@@ -135,12 +135,15 @@
             color: white;
             font-size: 1rem;
             resize: none;
-
         }
 
         textarea::placeholder {
             color: rgba(255, 255, 255, 0.7);
             text-align: justify;
+        }
+
+        option {
+            color: #000000;
         }
     </style>
 </head>
@@ -235,16 +238,45 @@
                     <div id="cadastro">
                         <div class="form-group">
                             <div id="form-nome">
-                                <input type="text" name="nome" id="nome" placeholder="NOME" required>
+                                <input type="text" id="nome" placeholder="NOME" required>
                             </div>
                             <div id="form-estado">
-                                <input type="text" name="estado" id="estado" placeholder="ESTADO" required>
+                                <select id="estado" required>
+                                    <option value="" disabled selected>ESTADO</option>
+                                    <option value="AC">Acre (AC)</option>
+                                    <option value="AL">Alagoas (AL)</option>
+                                    <option value="AP">Amapá (AP)</option>
+                                    <option value="AM">Amazonas (AM)</option>
+                                    <option value="BA">Bahia (BA)</option>
+                                    <option value="CE">Ceará (CE)</option>
+                                    <option value="DF">Distrito Federal (DF)</option>
+                                    <option value="ES">Espírito Santo (ES)</option>
+                                    <option value="GO">Goiás (GO)</option>
+                                    <option value="MA">Maranhão (MA)</option>
+                                    <option value="MT">Mato Grosso (MT)</option>
+                                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                                    <option value="MG">Minas Gerais (MG)</option>
+                                    <option value="PA">Pará (PA)</option>
+                                    <option value="PB">Paraíba (PB)</option>
+                                    <option value="PR">Paraná (PR)</option>
+                                    <option value="PE">Pernambuco (PE)</option>
+                                    <option value="PI">Piauí (PI)</option>
+                                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                                    <option value="RN">Rio Grande do Norte (RN)</option>
+                                    <option value="RS">Rio Grande do Sul (RS)</option>
+                                    <option value="RO">Rondônia (RO)</option>
+                                    <option value="RR">Roraima (RR)</option>
+                                    <option value="SC">Santa Catarina (SC)</option>
+                                    <option value="SP">São Paulo (SP)</option>
+                                    <option value="SE">Sergipe (SE)</option>
+                                    <option value="TO">Tocantins (TO)</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div id="form-email">
-                                <input type="email" name="email" id="email" placeholder="EMAIL CORPORATIVO" required>
+                                <input type="email" id="email" placeholder="EMAIL CORPORATIVO" required>
                             </div>
                         </div>
 
@@ -269,7 +301,6 @@
                         <div class="form-group">
                             <div id="form-cnpj">
                                 <input type="text" id="cnpj" placeholder="CNPJ" pattern="[0-9]{14}" required>
-                                <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" required>
                             </div>
                         </div>
                         <div id="mensagem-container">
@@ -324,7 +355,21 @@
     <script>
         var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a href="#" id="purecookielink">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
 
-        $('#cnpj').mask('00.000.000/0000-00', { reverse: true });
+        function cookieConsent() {
+            if (!getCookie("purecookieDismiss")) {
+                document.body.innerHTML += `
+            <div class="cookieConsentContainer" id="cookieConsentContainer">
+                <div class="cookieTitle"><a>${purecookieTitle}</a></div>
+                <div class="cookieDesc"><p>${purecookieDesc} ${purecookieLink}</p></div>
+                <div class="cookieButton"><a onClick="purecookieDismiss();">${purecookieButton}</a></div>
+            </div>`;
+                pureFadeIn("cookieConsentContainer");
+            }
+            $('#cnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('#ddd').mask('(00)');
+            $('#telefone').mask('0000-0000');
+        }
+
 
         function limpar() {
             // Limpar os campos de texto
@@ -371,6 +416,8 @@
                 }
             );
         }
+
+
     </script>
 
 </body>
