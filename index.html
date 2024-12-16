@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ValidarConsultoria</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
 
     <style>
         .cookieConsentContainer {
@@ -54,7 +57,7 @@
         .cookieConsentContainer .cookieButton a {
             display: inline-block;
             font-family: OpenSans, arial, sans-serif;
-           
+
             font-size: 14px;
             font-weight: 700;
             margin-top: 14px;
@@ -334,13 +337,13 @@
                 </div>
                 <div id="links">
                     <a id="insta" href="https://www.instagram.com/validarconsultoria/" target="_blank"><i
-                            class="bi bi-instagram"></i></a>
+                            class="px-1 bi bi-instagram"></i></a>
                     <a id="linke"
                         href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/?originalSubdomain=br"
-                        target="_blank"><i class="bi bi-linkedin"></i></a>
+                        target="_blank"><i class="px-1 bi bi-linkedin"></i></a>
                     <a id="zap"
                         href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
-                        target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        target="_blank"><i class="px-1 bi bi-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -348,7 +351,7 @@
     </footer>
 
     <div id="modal">
-        
+
 
     </div>
 
@@ -411,7 +414,6 @@
 
             emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
                 (response) => {
-                    console.log('SUCCESS!', response.status, response.text);
                     alert('Email enviado com sucesso!');
                     limpar();
                 },
@@ -421,8 +423,6 @@
                 }
             );
         }
-
-
     </script>
 
 </body>
