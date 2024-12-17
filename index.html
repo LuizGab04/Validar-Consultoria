@@ -312,7 +312,8 @@
                         </div>
                         <div id="form-group" class="pt-2">
                             <div id="botaoEnviar">
-                                <button type="submit" class="btn btn-warning">FALE COM UM ESPECIALISTA</button>
+                                <button type="submit" class="btn btn-warning" id="submitButton">FALE COM UM
+                                    ESPECIALISTA<span class="spinner"></span></button>
                             </div>
                         </div>
                     </div>
@@ -350,10 +351,26 @@
 
     </footer>
 
-    <div id="modal">
 
-
+    <div class="modal-fade" id="modal" data-bs-backdrop="modal"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 
 
@@ -361,7 +378,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
-        var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a href="#" id="purecookielink">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
+        var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a href="#modal-fade" data-bs-toggle="modal" id="purecookielink">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
 
         function cookieConsent() {
             if (!getCookie("purecookieDismiss")) {
@@ -377,6 +394,8 @@
             $('#ddd').mask('(00)');
             $('#telefone').mask('00000-0000');
         }
+
+
 
 
         function limpar() {
@@ -400,6 +419,13 @@
         function SendMail(event) {
             event.preventDefault(); // Previne o envio padrão do formulário
 
+            const submitButton = document.getElementById("submitButton");
+            const spinner = submitButton.querySelector(".spinner")
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Enviando...";
+
+
             let dados = {
                 nome: document.getElementById("nome").value,
                 estado: document.getElementById("estado").value,
@@ -421,7 +447,10 @@
                     console.log('FAILED...', error);
                     alert('Falha ao enviar o email. Tente novamente.');
                 }
-            );
+            ).finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "FALE COM UM ESPECIALISTA";
+            });;
         }
     </script>
 
