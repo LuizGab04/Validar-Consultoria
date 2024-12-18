@@ -15,6 +15,41 @@
 
 
     <style>
+ /* Estilo para a div que contém a imagem e o título */
+ .representacao {
+           
+         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o destaque */
+        }
+
+
+    
+
+        .representacao:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        .caixa-texto {
+            display: none; 
+            position: absolute; 
+            top: 100%; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background-color: #f7f7f7;
+            padding: 10px;
+            margin-top: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            font-size: 14px;
+            color: #555;
+        }
+
+        
+        .representacao:hover .caixa-texto {
+            display: block;
+        }
         .cookieConsentContainer {
             z-index: 999;
             width: 350px;
@@ -207,26 +242,51 @@
                     </div>
                 </div>
                 <div id="categorias">
-                    <div id="representacao" class="mb-5">
-                        <img src="assets\images\img_2.png">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
-                    </div>
-                    <div id="reestruturacao" class="mb-5">
-                        <img src="assets\images\img_1.png">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
-                    </div>
-                    <div id="capitacao" class="mb-5">
-                        <img src="assets\images\img_3.png">
-                        <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
-                    </div>
-                    <div id="reestruturacaoCarteira" class="mb-5">
-                        <img src="assets\images\img_4.png">
-                        <h6 class="m-3">REESTRUTURAÇÃO DE<br>CARTEIRA DE RECEBÍVEIS</h6>
-                    </div>
-                    <div id="reestruturacaoAdm" class="mt-5">
-                        <img src="assets\images\img_5.png">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
-                    </div>
+                     <!-- Primeiro elemento -->
+    <div id="representacao" class="representacao mb-5">
+        <img src="assets/images/img_2.png" alt="Imagem representativa">
+        <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
+        <div class="caixa-texto">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+        </div>
+    </div>
+
+    <!-- Segundo elemento -->
+    <div id="reestruturacao" class="representacao mb-5">
+        <img src="assets/images/img_1.png" alt="Imagem de reestruturação de fluxo de caixa">
+        <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
+        <div class="caixa-texto">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+        </div>
+    </div>
+
+    <!-- Terceiro elemento -->
+    <div id="capitacao" class="representacao mb-5">
+        <img src="assets/images/img_3.png" alt="Imagem de captação de recursos">
+        <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
+        <div class="caixa-texto">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+        </div>
+    </div>
+
+    <!-- Quarto elemento -->
+    <div id="reestruturacaoCarteira" class="representacao mb-5">
+        <img src="assets/images/img_4.png" alt="Imagem de reestruturação de carteira de recebíveis">
+        <h6 class="m-3">REESTRUTURAÇÃO DE<br>CARTEIRA DE RECEBÍVEIS</h6>
+        <div class="caixa-texto">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+        </div>
+    </div>
+
+    <!-- Quinto elemento -->
+    <div id="reestruturacaoAdm" class="representacao mt-5">
+        <img src="assets/images/img_5.png" alt="Imagem de reestruturação administrativa">
+        <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
+        <div class="caixa-texto">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book...
+        </div>
+    </div>
+
                 </div>
             </div>
 
