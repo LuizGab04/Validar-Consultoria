@@ -184,7 +184,6 @@
             </div>
         </div>
     </div>
-
     <div id="parte2">
         <div id="container-pt2">
             <div id="imgs-parte2">
@@ -348,11 +347,9 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
-
-    <div class="modal-fade" id="modal" data-bs-backdrop="modal"
+    <div class="modal fade" id="modalCookies" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -370,16 +367,16 @@
             </div>
         </div>
     </div>
-
-
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
-        var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a href="#modal-fade" data-bs-toggle="modal" id="purecookielink">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
-
+        var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a id="Mocookies" class="" type="button" href="#" data-bs-toggle="modal" data-bs-target="#modalCookies">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
+        //O modal n ta abrindo, eu to chamando ele certinho mds.... tft no trabalho??????? to sem nada pra fazer ja terminei as demandas, melhor fazer isso e ganhar sabedoria do que jogar 😀
+        //NN
+        // RAFAEL O DOLAR VAI BATER 7 CONTO KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK ANOTA ISSO AI ANOTA era isso que tava faltando, to vendo como q faz aqui
+        //sSSS, eu to vendo assim, ou é melhor criar um botao botao?, será? entao era esse o objetivo pra não perder o "saiba mais"
         function cookieConsent() {
             if (!getCookie("purecookieDismiss")) {
                 document.body.innerHTML += `
