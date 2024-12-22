@@ -13,11 +13,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <style>
-        /* Estilo para a div que contém a imagem e o título */
-        .representacao {
-
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Suaviza o destaque */
+ /* Estilo para a div que contém a imagem e o título */
+ .representacao {
+           
+         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o destaque */
         }
 
         .representacao:hover {
@@ -42,6 +41,7 @@
             color: #555;
         }
 
+        
         .representacao:hover .caixa-texto {
             display: block;
         }
@@ -457,11 +457,11 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Política de Privacidade</strong></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    ...
+                <div class="modal-body" style="max-height: 580px; overflow: auto;">
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -494,6 +494,9 @@
             $('#ddd').mask('(00)');
             $('#telefone').mask('00000-0000');
         }
+
+
+
 
         function limpar() {
             // Limpar os campos de texto
