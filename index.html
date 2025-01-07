@@ -493,66 +493,33 @@
             submitButton.disabled = true;
             submitButton.textContent = "Enviando...";
 
-            const cnpj = $('#cnpj').val().replace(/[^\d]/g, "");
-            const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
+            // Dados do formulário 
+            let dados = {
+                nome: document.getElementById("nome").value,
+                estado: document.getElementById("estado").value,
+                email: document.getElementById("email").value,
+                ddd: document.getElementById("ddd").value,
+                telefone: document.getElementById("telefone").value,
+                cargo: document.getElementById("cargo").value,
+                cnpj: document.getElementById("cnpj").value,
+                faturamento: document.getElementById("faturamento").value,
+                mensagem: document.getElementById("msg-txt").value
+            };
 
-            try {
-                // Chamada à API da ReceitaWS com cabeçalhos personalizados
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',  // Cabeçalho informando que o conteúdo é JSON
-                        'Authorization': 'Bearer SEU_TOKEN_AQUI'  // Exemplo de cabeçalho de autenticação (se necessário)
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error("Erro ao consultar o CNPJ.");
+            // Enviar email com os dados coletados
+            emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
+                (response) => {
+                    alert('Email enviado com sucesso!');
+                    limpar();
+                },
+                (error) => {
+                    console.log('FAILED...', error);
+                    alert('Falha ao enviar o email. Tente novamente.');
                 }
-
-                const dadosCNPJ = await response.json();
-
-                if (dadosCNPJ.status === "ERROR") {
-                    alert("CNPJ não encontrado ou inválido.");
-                    submitButton.disabled = false;
-                    submitButton.textContent = "FALE COM UM ESPECIALISTA";
-                    return;
-                }
-
-                // Dados do formulário + dados da API
-                let dados = {
-                    nome: document.getElementById("nome").value || dadosCNPJ.nome || "",
-                    estado: document.getElementById("estado").value || dadosCNPJ.uf || "",
-                    email: document.getElementById("email").value || dadosCNPJ.email || "",
-                    ddd: document.getElementById("ddd").value,
-                    telefone: document.getElementById("telefone").value,
-                    cargo: document.getElementById("cargo").value,
-                    cnpj: $('#cnpj').val(),
-                    faturamento: document.getElementById("faturamento").value || dadosCNPJ.capital_social || "",
-                    mensagem: document.getElementById("msg-txt").value
-                };
-
-                // Enviar email com os dados coletados
-                emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
-                    (response) => {
-                        alert('Email enviado com sucesso!');
-                        limpar();
-                    },
-                    (error) => {
-                        console.log('FAILED...', error);
-                        alert('Falha ao enviar o email. Tente novamente.');
-                    }
-                ).finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.textContent = "FALE COM UM ESPECIALISTA";
-                });
-
-            } catch (error) {
-                console.error("Erro ao buscar dados do CNPJ:", error);
-                alert("Erro ao buscar os dados do CNPJ. Tente novamente.");
+            ).finally(() => {
                 submitButton.disabled = false;
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
-            }
+            });
         }
     </script>
 </body>
