@@ -496,8 +496,6 @@
             const cnpj = $('#cnpj').val().replace(/[^\d]/g, "");
             const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
 
-            console.log(cnp)
-
             try {
                 // Chamada à API da ReceitaWS
                 const response = await fetch(url);
