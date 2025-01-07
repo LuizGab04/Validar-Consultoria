@@ -497,8 +497,15 @@
             const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
 
             try {
-                // Chamada à API da ReceitaWS
-                const response = await fetch(url);
+                // Chamada à API da ReceitaWS com cabeçalhos personalizados
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',  // Cabeçalho informando que o conteúdo é JSON
+                        'Authorization': 'Bearer SEU_TOKEN_AQUI'  // Exemplo de cabeçalho de autenticação (se necessário)
+                    }
+                });
+
                 if (!response.ok) {
                     throw new Error("Erro ao consultar o CNPJ.");
                 }
@@ -547,7 +554,6 @@
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
             }
         }
-
     </script>
 </body>
 
