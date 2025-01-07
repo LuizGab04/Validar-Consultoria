@@ -13,10 +13,11 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <style>
- /* Estilo para a div que contém a imagem e o título */
- .representacao {
-           
-         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza o destaque */
+        /* Estilo para a div que contém a imagem e o título */
+        .representacao {
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Suaviza o destaque */
         }
 
         .representacao:hover {
@@ -41,7 +42,7 @@
             color: #555;
         }
 
-        
+
         .representacao:hover .caixa-texto {
             display: block;
         }
@@ -111,7 +112,7 @@
                 width: 100% !important
             }
         }
-    
+
         .form-group {
             display: flex;
             gap: 10px;
@@ -204,42 +205,47 @@
         <div id="container-pt1">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
             <h2>Valide sua empresa</h2>
             <h3>com a melhor equipe de<br>consultoria financeira do<br>mercado.</h3>
             <div id="botoes-pt1">
@@ -468,81 +474,83 @@
             </div>
         </div>
     </div>
+    <script src="validarConsult.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
-        var purecookieTitle = "Cookies.", purecookieDesc = "Utilizando esse site, você automáticamente está aceitando o uso de cookies.", purecookieLink = '<a id="Mocookies" class="" type="button" href="#" data-bs-toggle="modal" data-bs-target="#modalCookies">Saiba Mais?</a>', purecookieButton = "Aceitar"; function pureFadeIn(e, o) { var i = document.getElementById(e); i.style.opacity = 0, i.style.display = o || "block", function e() { var o = parseFloat(i.style.opacity); (o += .02) > 1 || (i.style.opacity = o, requestAnimationFrame(e)) }() } function pureFadeOut(e) { var o = document.getElementById(e); o.style.opacity = 1, function e() { (o.style.opacity -= .02) < 0 ? o.style.display = "none" : requestAnimationFrame(e) }() } function setCookie(e, o, i) { var t = ""; if (i) { var n = new Date; n.setTime(n.getTime() + i * 1000), t = "; expires=" + n.toUTCString() } document.cookie = e + "=" + (o || "") + t + "; path=/" } function getCookie(e) { for (var o = e + "=", i = document.cookie.split(";"), t = 0; t < i.length; t++) { for (var n = i[t]; " " == n.charAt(0);)n = n.substring(1, n.length); if (0 == n.indexOf(o)) return n.substring(o.length, n.length) } return null } function eraseCookie(e) { document.cookie = e + "=; Max-Age=-99999999;" } function cookieConsent() { getCookie("purecookieDismiss") || (document.body.innerHTML += '<div class="cookieConsentContainer" id="cookieConsentContainer"><div class="cookieTitle"><a>' + purecookieTitle + '</a></div><div class="cookieDesc"><p>' + purecookieDesc + " " + purecookieLink + '</p></div><div class="cookieButton"><a onClick="purecookieDismiss();">' + purecookieButton + "</a></div></div>", pureFadeIn("cookieConsentContainer")) } function purecookieDismiss() { setCookie("purecookieDismiss", "1", 1), pureFadeOut("cookieConsentContainer") } window.onload = function () { cookieConsent() };
-        function cookieConsent() {
-            if (!getCookie("purecookieDismiss")) {
-                document.body.innerHTML += `
-            <div class="cookieConsentContainer" id="cookieConsentContainer">
-                <div class="cookieTitle"><a>${purecookieTitle}</a></div>
-                <div class="cookieDesc"><p>${purecookieDesc} ${purecookieLink}</p></div>
-                <div class="cookieButton"><a onClick="purecookieDismiss();">${purecookieButton}</a></div>
-            </div>`;
-                pureFadeIn("cookieConsentContainer");
-            }
-            $('#cnpj').mask('00.000.000/0000-00', { reverse: true });
-            $('#ddd').mask('(00)');
-            $('#telefone').mask('00000-0000');
-        }
-
-        function limpar() {
-            // Limpar os campos de texto
-            document.getElementById("nome").value = "";
-            document.getElementById("estado").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("ddd").value = "";
-            document.getElementById("telefone").value = "";
-            document.getElementById("cargo").value = "";
-            document.getElementById("faturamento").value = "";
-            document.getElementById("cnpj").value = "";
-            document.getElementById("msg-txt").value = "";
-        }
 
         (function () {
             emailjs.init({
                 publicKey: "8UbLfo2nhuX2QXObo",
             });
         })();
-        function SendMail(event) {
+        async function SendMail(event) {
             event.preventDefault(); // Previne o envio padrão do formulário
 
             const submitButton = document.getElementById("submitButton");
-            const spinner = submitButton.querySelector(".spinner")
-
             submitButton.disabled = true;
             submitButton.textContent = "Enviando...";
 
+            const cnpj = $('#cnpj').val().replace(/[^\d]/g, "");
+            const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
 
-            let dados = {
-                nome: document.getElementById("nome").value,
-                estado: document.getElementById("estado").value,
-                email: document.getElementById("email").value,
-                ddd: document.getElementById("ddd").value,
-                telefone: document.getElementById("telefone").value,
-                cargo: document.getElementById("cargo").value,
-                cnpj: document.getElementById("cnpj").value,
-                faturamento: document.getElementById("faturamento").value,
-                mensagem: document.getElementById("msg-txt").value
-            };
+            console.log(cnpj)
 
-            emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
-                (response) => {
-                    alert('Email enviado com sucesso!');
-                    limpar();
-                },
-                (error) => {
-                    console.log('FAILED...', error);
-                    alert('Falha ao enviar o email. Tente novamente.');
+            try {
+                // Chamada à API da ReceitaWS
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Erro ao consultar o CNPJ.");
                 }
-            ).finally(() => {
+
+                const dadosCNPJ = await response.json();
+
+                if (dadosCNPJ.status === "ERROR") {
+                    alert("CNPJ não encontrado ou inválido.");
+                    submitButton.disabled = false;
+                    submitButton.textContent = "FALE COM UM ESPECIALISTA";
+                    return;
+                }
+
+                // Dados do formulário + dados da API
+                let dados = {
+                    nome: document.getElementById("nome").value,
+                    estado: document.getElementById("estado").value,
+                    email: document.getElementById("email").value,
+                    ddd: document.getElementById("ddd").value,
+                    telefone: document.getElementById("telefone").value,
+                    cargo: document.getElementById("cargo").value,
+                    cnpj: $('#cnpj').val(),
+                    faturamento: document.getElementById("faturamento").value,
+                    mensagem: document.getElementById("msg-txt").value
+                };
+
+
+                // Enviar email com os dados coletados
+                emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
+                    (response) => {
+                        alert('Email enviado com sucesso!');
+                        limpar();
+                    },
+                    (error) => {
+                        console.log('FAILED...', error);
+                        alert('Falha ao enviar o email. Tente novamente.');
+                    }
+                ).finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "FALE COM UM ESPECIALISTA";
+                });
+
+            } catch (error) {
+                console.error("Erro ao buscar dados do CNPJ:", error);
+                alert("Erro ao buscar os dados do CNPJ. Tente novamente.");
                 submitButton.disabled = false;
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
-            });;
+            }
         }
+
     </script>
 </body>
 
