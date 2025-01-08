@@ -60,30 +60,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     min-width: 570px;
-    height: 500px;
+    height: auto;
 }
 
 @media (max-width: 768px) {
     #parte1 {
         width: 100% !important
     }
-}
-
-#parte1 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: -7px;
-    color: #FFFF;
-}
-
-#parte1 h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #FFF;
-}
-
-#container-pt1 {
-    padding-top: 160px;
-    padding-left: 115px;
 }
 
 /* Fim da primeira parte da pagina */
