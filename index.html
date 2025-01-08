@@ -15,7 +15,6 @@
     <style>
         /* Estilo para a div que contém a imagem e o título */
         .representacao {
-
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             /* Suaviza o destaque */
         }
@@ -201,233 +200,223 @@
             </div>
         </div>
     </header>
-    <div id="parte1">
-        <div id="container-pt1">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+    <main>
+        <div id="parte1">
+            <div id="container-pt1">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="assets/images/fadein3.png" class="d-block mx-auto w-50" alt="Slide">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="assets\images\Missao.png" class="d-block mx-auto w-50" alt="Slide">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="assets\images\pqValidar.png" class="d-block mx-auto w-50" alt="Slide">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <h2>Valide sua empresa</h2>
-            <h3>com a melhor equipe de<br>consultoria financeira do<br>mercado.</h3>
-            <div id="botoes-pt1">
-                <div id="botao-contato">
-                    <a href="#formulario"><button class="btn btn-light w-140"><strong>CONTATO</strong></button></a>
-                </div>
-                <div id="botao-servico">
-                    <a href="#parte2"><button class="btn btn-outline-light ms-2">NOSSOS SERVIÇOS</button></a>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="parte2">
-        <div id="container-pt2">
-            <div id="imgs-parte2">
-                <div id="logo-p">
-                    <img src="assets\images\p-validar.png">
-                </div>
+        <div id="parte2">
+            <div id="container-pt2">
+                <div id="imgs-parte2">
+                    <div id="logo-p">
+                        <img src="assets\images\p-validar.png">
+                    </div>
 
-                <div id="logo-grande">
-                    <img src="assets\images\logo-grande.png">
+                    <div id="logo-grande">
+                        <img src="assets\images\logo-grande.png">
+                    </div>
+                </div>
+                <div id="info-validar" class="container mb-4">
+                    <div id="resumo-pt2">
+                        <div id="text-cimapt2">
+                            <h5><strong>SE A SUA EMPRESA ENFRENTA...</strong><br></h5>
+                        </div>
+                        <div id="text-baixopt2">
+                            <h6>desafios financeiros como falta de controle de fluxo de caixa,
+                                dificuldade em reduzir custos, falhas no planejamento orçamentário.
+                                Então somos a solução perfeita para sua empresa e vamos fornecer:</h6>
+                        </div>
+                    </div>
+                    <div id="categorias">
+                        <!-- Primeiro elemento -->
+                        <div id="representacao" class="representacao mb-5">
+                            <img src="assets/images/img_2.png" alt="Imagem representativa">
+                            <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
+                            <div class="caixa-texto">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book...
+                            </div>
+                        </div>
+
+                        <!-- Segundo elemento -->
+                        <div id="reestruturacao" class="representacao mb-5">
+                            <img src="assets/images/img_1.png" alt="Imagem de reestruturação de fluxo de caixa">
+                            <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
+                            <div class="caixa-texto">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book...
+                            </div>
+                        </div>
+
+                        <!-- Terceiro elemento -->
+                        <div id="capitacao" class="representacao mb-5">
+                            <img src="assets/images/img_3.png" alt="Imagem de captação de recursos">
+                            <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
+                            <div class="caixa-texto">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book...
+                            </div>
+                        </div>
+
+                        <!-- Quarto elemento -->
+                        <div id="reestruturacaoCarteira" class="representacao mb-5">
+                            <img src="assets/images/img_4.png" alt="Imagem de reestruturação de carteira de recebíveis">
+                            <h6 class="m-3">REESTRUTURAÇÃO DE<br>CARTEIRA DE RECEBÍVEIS</h6>
+                            <div class="caixa-texto">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book...
+                            </div>
+                        </div>
+
+                        <!-- Quinto elemento -->
+                        <div id="reestruturacaoAdm" class="representacao mt-5">
+                            <img src="assets/images/img_5.png" alt="Imagem de reestruturação administrativa">
+                            <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
+                            <div class="caixa-texto">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book...
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-            <div id="info-validar" class="container mb-4">
-                <div id="resumo-pt2">
-                    <div id="text-cimapt2">
-                        <h5><strong>SE A SUA EMPRESA ENFRENTA...</strong><br></h5>
-                    </div>
-                    <div id="text-baixopt2">
-                        <h6>desafios financeiros como falta de controle de fluxo de caixa,
-                            dificuldade em reduzir custos, falhas no planejamento orçamentário.
-                            Então somos a solução perfeita para sua empresa e vamos fornecer:</h6>
-                    </div>
-                </div>
-                <div id="categorias">
-                    <!-- Primeiro elemento -->
-                    <div id="representacao" class="representacao mb-5">
-                        <img src="assets/images/img_2.png" alt="Imagem representativa">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
-                        <div class="caixa-texto">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book...
-                        </div>
-                    </div>
+        </div>
+        <div id="parte3">
+            <div id="container-formulario" class="pb-5">
+                <div id="formulario">
+                    <h3>CADASTRO</h3>
+                    <form method="POST" onsubmit="SendMail(event)">
+                        <div id="cadastro">
+                            <div class="form-group">
+                                <div id="form-nome">
+                                    <input type="text" id="nome" placeholder="NOME" required>
+                                </div>
+                                <div id="form-estado">
+                                    <select id="estado" required>
+                                        <option value="" disabled selected>ESTADO</option>
+                                        <option value="AC">Acre (AC)</option>
+                                        <option value="AL">Alagoas (AL)</option>
+                                        <option value="AP">Amapá (AP)</option>
+                                        <option value="AM">Amazonas (AM)</option>
+                                        <option value="BA">Bahia (BA)</option>
+                                        <option value="CE">Ceará (CE)</option>
+                                        <option value="DF">Distrito Federal (DF)</option>
+                                        <option value="ES">Espírito Santo (ES)</option>
+                                        <option value="GO">Goiás (GO)</option>
+                                        <option value="MA">Maranhão (MA)</option>
+                                        <option value="MT">Mato Grosso (MT)</option>
+                                        <option value="MS">Mato Grosso do Sul (MS)</option>
+                                        <option value="MG">Minas Gerais (MG)</option>
+                                        <option value="PA">Pará (PA)</option>
+                                        <option value="PB">Paraíba (PB)</option>
+                                        <option value="PR">Paraná (PR)</option>
+                                        <option value="PE">Pernambuco (PE)</option>
+                                        <option value="PI">Piauí (PI)</option>
+                                        <option value="RJ">Rio de Janeiro (RJ)</option>
+                                        <option value="RN">Rio Grande do Norte (RN)</option>
+                                        <option value="RS">Rio Grande do Sul (RS)</option>
+                                        <option value="RO">Rondônia (RO)</option>
+                                        <option value="RR">Roraima (RR)</option>
+                                        <option value="SC">Santa Catarina (SC)</option>
+                                        <option value="SP">São Paulo (SP)</option>
+                                        <option value="SE">Sergipe (SE)</option>
+                                        <option value="TO">Tocantins (TO)</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                    <!-- Segundo elemento -->
-                    <div id="reestruturacao" class="representacao mb-5">
-                        <img src="assets/images/img_1.png" alt="Imagem de reestruturação de fluxo de caixa">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
-                        <div class="caixa-texto">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book...
-                        </div>
-                    </div>
+                            <div class="form-group">
+                                <div id="form-email">
+                                    <input type="email" id="email" placeholder="EMAIL CORPORATIVO" required>
+                                </div>
+                            </div>
 
-                    <!-- Terceiro elemento -->
-                    <div id="capitacao" class="representacao mb-5">
-                        <img src="assets/images/img_3.png" alt="Imagem de captação de recursos">
-                        <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
-                        <div class="caixa-texto">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book...
-                        </div>
-                    </div>
+                            <div class="form-group">
+                                <div id="form-ddd">
+                                    <input type="text" id="ddd" placeholder="DDD" required>
+                                </div>
+                                <div id="form-telefone">
+                                    <input type="tel" id="telefone" placeholder="CELULAR" required>
+                                </div>
+                            </div>
 
-                    <!-- Quarto elemento -->
-                    <div id="reestruturacaoCarteira" class="representacao mb-5">
-                        <img src="assets/images/img_4.png" alt="Imagem de reestruturação de carteira de recebíveis">
-                        <h6 class="m-3">REESTRUTURAÇÃO DE<br>CARTEIRA DE RECEBÍVEIS</h6>
-                        <div class="caixa-texto">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book...
+                            <div class="form-group">
+                                <div id="form-cargo">
+                                    <input type="text" id="cargo" placeholder="CARGO" required>
+                                </div>
+                                <div id="form-faturamento">
+                                    <input type="text" name="faturamento" id="faturamento" placeholder="FATURAMENTO"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div id="form-cnpj">
+                                    <input type="text" id="cnpj" placeholder="CNPJ" required>
+                                </div>
+                            </div>
+                            <div id="mensagem-container">
+                                <textarea id="msg-txt" rows="5" cols="33" class=""
+                                    placeholder="O QUE LEVOU SUA EMPRESA A BUSCAR NOSSOS SERVIÇOS? POR FAVOR, RELATE AS NECESSIDADES DA EMPRESA E COMO PODEMOS AUXILIÁ-LO."></textarea>
+                            </div>
+                            <div id="form-group" class="pt-2">
+                                <div id="botaoEnviar">
+                                    <button type="submit" class="btn btn-warning" id="submitButton">FALE COM UM
+                                        ESPECIALISTA<span class="spinner"></span></button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Quinto elemento -->
-                    <div id="reestruturacaoAdm" class="representacao mt-5">
-                        <img src="assets/images/img_5.png" alt="Imagem de reestruturação administrativa">
-                        <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
-                        <div class="caixa-texto">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book...
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="parte3">
-        <div id="container-formulario" class="pb-5">
-            <div id="formulario">
-                <h3>CADASTRO</h3>
-                <form method="POST" onsubmit="SendMail(event)">
-                    <div id="cadastro">
-                        <div class="form-group">
-                            <div id="form-nome">
-                                <input type="text" id="nome" placeholder="NOME" required>
-                            </div>
-                            <div id="form-estado">
-                                <select id="estado" required>
-                                    <option value="" disabled selected>ESTADO</option>
-                                    <option value="AC">Acre (AC)</option>
-                                    <option value="AL">Alagoas (AL)</option>
-                                    <option value="AP">Amapá (AP)</option>
-                                    <option value="AM">Amazonas (AM)</option>
-                                    <option value="BA">Bahia (BA)</option>
-                                    <option value="CE">Ceará (CE)</option>
-                                    <option value="DF">Distrito Federal (DF)</option>
-                                    <option value="ES">Espírito Santo (ES)</option>
-                                    <option value="GO">Goiás (GO)</option>
-                                    <option value="MA">Maranhão (MA)</option>
-                                    <option value="MT">Mato Grosso (MT)</option>
-                                    <option value="MS">Mato Grosso do Sul (MS)</option>
-                                    <option value="MG">Minas Gerais (MG)</option>
-                                    <option value="PA">Pará (PA)</option>
-                                    <option value="PB">Paraíba (PB)</option>
-                                    <option value="PR">Paraná (PR)</option>
-                                    <option value="PE">Pernambuco (PE)</option>
-                                    <option value="PI">Piauí (PI)</option>
-                                    <option value="RJ">Rio de Janeiro (RJ)</option>
-                                    <option value="RN">Rio Grande do Norte (RN)</option>
-                                    <option value="RS">Rio Grande do Sul (RS)</option>
-                                    <option value="RO">Rondônia (RO)</option>
-                                    <option value="RR">Roraima (RR)</option>
-                                    <option value="SC">Santa Catarina (SC)</option>
-                                    <option value="SP">São Paulo (SP)</option>
-                                    <option value="SE">Sergipe (SE)</option>
-                                    <option value="TO">Tocantins (TO)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div id="form-email">
-                                <input type="email" id="email" placeholder="EMAIL CORPORATIVO" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div id="form-ddd">
-                                <input type="text" id="ddd" placeholder="DDD" required>
-                            </div>
-                            <div id="form-telefone">
-                                <input type="tel" id="telefone" placeholder="CELULAR" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div id="form-cargo">
-                                <input type="text" id="cargo" placeholder="CARGO" required>
-                            </div>
-                            <div id="form-faturamento">
-                                <input type="text" name="faturamento" id="faturamento" placeholder="FATURAMENTO"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div id="form-cnpj">
-                                <input type="text" id="cnpj" placeholder="CNPJ" required>
-                            </div>
-                        </div>
-                        <div id="mensagem-container">
-                            <textarea id="msg-txt" rows="5" cols="33" class=""
-                                placeholder="O QUE LEVOU SUA EMPRESA A BUSCAR NOSSOS SERVIÇOS? POR FAVOR, RELATE AS NECESSIDADES DA EMPRESA E COMO PODEMOS AUXILIÁ-LO."></textarea>
-                        </div>
-                        <div id="form-group" class="pt-2">
-                            <div id="botaoEnviar">
-                                <button type="submit" class="btn btn-warning" id="submitButton">FALE COM UM
-                                    ESPECIALISTA<span class="spinner"></span></button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    </main>
     <footer>
         <div id="rodape">
             <div id="logo-container">
@@ -480,6 +469,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
+        function limparCNPJ() {
+            getElementById("cnpj") = cnpj;
+
+        }
 
         (function () {
             emailjs.init({
@@ -493,28 +486,25 @@
             submitButton.disabled = true;
             submitButton.textContent = "Enviando...";
 
-            const cnpj = $('#cnpj').val().replace(/[^\d]/g, "");
-            const url = `https://www.receitaws.com.br/v1/cnpj/${cnpj}`;
-
-            console.log(cnpj)
+            const cnpj = $('#cnpj').val().replace(/[^\d]/g, ""); // Remove caracteres não numéricos
+            const url = `https://publica.cnpj.ws/cnpj/${cnpj}`;
 
             try {
-                // Chamada à API da ReceitaWS
-                const response = await fetch(url);
-                if (!response.ok) {
+                // Consulta à API do CNPJ
+                const responseCnpj = await fetch(url);
+                if (!responseCnpj.ok) {
                     throw new Error("Erro ao consultar o CNPJ.");
                 }
 
-                const dadosCNPJ = await response.json();
-
-                if (dadosCNPJ.status === "ERROR") {
+                const cnpjData = await responseCnpj.json();
+                if (cnpjData.status === "ERROR") {
                     alert("CNPJ não encontrado ou inválido.");
                     submitButton.disabled = false;
                     submitButton.textContent = "FALE COM UM ESPECIALISTA";
-                    return;
+                    return; // Para a execução se o CNPJ for inválido
                 }
 
-                // Dados do formulário + dados da API
+                // Dados do formulário
                 let dados = {
                     nome: document.getElementById("nome").value,
                     estado: document.getElementById("estado").value,
@@ -522,35 +512,23 @@
                     ddd: document.getElementById("ddd").value,
                     telefone: document.getElementById("telefone").value,
                     cargo: document.getElementById("cargo").value,
-                    cnpj: $('#cnpj').val(),
+                    cnpj: document.getElementById("cnpj").value,
                     faturamento: document.getElementById("faturamento").value,
                     mensagem: document.getElementById("msg-txt").value
                 };
 
-
                 // Enviar email com os dados coletados
-                emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados).then(
-                    (response) => {
-                        alert('Email enviado com sucesso!');
-                        limpar();
-                    },
-                    (error) => {
-                        console.log('FAILED...', error);
-                        alert('Falha ao enviar o email. Tente novamente.');
-                    }
-                ).finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.textContent = "FALE COM UM ESPECIALISTA";
-                });
-
+                await emailjs.send('service_52q6iq9', 'template_5rmfbvr', dados);
+                alert('Email enviado com sucesso!');
+                limpar();
             } catch (error) {
-                console.error("Erro ao buscar dados do CNPJ:", error);
-                alert("Erro ao buscar os dados do CNPJ. Tente novamente.");
+                console.error("Erro:", error);
+                alert('Erro ao processar a requisição. Tente novamente.');
+            } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
             }
         }
-
     </script>
 </body>
 
