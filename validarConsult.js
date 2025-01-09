@@ -28,4 +28,3 @@ function limpar() {
     document.getElementById("msg-txt").value = "";
 
 }
-
