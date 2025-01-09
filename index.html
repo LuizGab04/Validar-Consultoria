@@ -177,6 +177,16 @@
         option {
             color: #000000;
         }
+
+        .is-invalid {
+            border: solid #ff0000;
+            background-color: #ffe6e6;
+        }
+
+        .form-control::placeholder {
+            color: white;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -324,7 +334,7 @@
                         <div id="cadastro">
                             <div class="form-group">
                                 <div id="form-nome">
-                                    <input type="text" id="nome" placeholder="NOME" required>
+                                    <input type="text" class="form-control" id="nome" placeholder="NOME" required>
                                 </div>
                                 <div id="form-estado">
                                     <select id="estado" required>
@@ -362,31 +372,32 @@
 
                             <div class="form-group">
                                 <div id="form-email">
-                                    <input type="email" id="email" placeholder="EMAIL CORPORATIVO" required>
+                                    <input type="email" class="form-control" id="email" placeholder="EMAIL CORPORATIVO"
+                                        required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div id="form-ddd">
-                                    <input type="text" id="ddd" placeholder="DDD" required>
+                                    <input type="text" class="form-control" id="ddd" placeholder="DDD" required>
                                 </div>
                                 <div id="form-telefone">
-                                    <input type="tel" id="telefone" placeholder="CELULAR" required>
+                                    <input type="tel" class="form-control" id="telefone" placeholder="CELULAR" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div id="form-cargo">
-                                    <input type="text" id="cargo" placeholder="CARGO" required>
+                                    <input type="text" class="form-control" id="cargo" placeholder="CARGO" required>
                                 </div>
                                 <div id="form-faturamento">
-                                    <input type="text" name="faturamento" id="faturamento" placeholder="FATURAMENTO"
-                                        required>
+                                    <input type="text" class="form-control" name="faturamento" id="faturamento"
+                                        placeholder="FATURAMENTO" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div id="form-cnpj">
-                                    <input type="text" id="cnpj" placeholder="CNPJ" required>
+                                    <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" required>
                                 </div>
                             </div>
                             <div id="mensagem-container">
@@ -463,14 +474,19 @@
                 publicKey: "8UbLfo2nhuX2QXObo",
             });
         })();
+        document.getElementById("cnpj").addEventListener("input", function () {
+            this.classList.remove("is-invalid");
+        });
+
         async function SendMail(event) {
             event.preventDefault(); // Previne o envio padrão do formulário
-
+            
+            const cnpjField = document.getElementById("cnpj");
+            cnpjField.classList.remove("is-invalid");
             const submitButton = document.getElementById("submitButton");
             submitButton.disabled = true;
             submitButton.textContent = "Enviando...";
-
-            const cnpj = $('#cnpj').val().replace(/[^\d]/g, ""); // Remove caracteres não numéricos
+            const cnpj = cnpjField.value.replace(/[^\d]/g, ""); // Remove caracteres não numéricos
             const url = `https://publica.cnpj.ws/cnpj/${cnpj}`;
 
             try {
@@ -483,6 +499,7 @@
                 const cnpjData = await responseCnpj.json();
                 if (cnpjData.status === "ERROR") {
                     alert("CNPJ não encontrado ou inválido.");
+                    cnpjField.classList.add("is-invalid");
                     submitButton.disabled = false;
                     submitButton.textContent = "FALE COM UM ESPECIALISTA";
                     return; // Para a execução se o CNPJ for inválido
@@ -496,7 +513,7 @@
                     ddd: document.getElementById("ddd").value,
                     telefone: document.getElementById("telefone").value,
                     cargo: document.getElementById("cargo").value,
-                    cnpj: document.getElementById("cnpj").value,
+                    cnpj: cnpjField.value,
                     faturamento: document.getElementById("faturamento").value,
                     mensagem: document.getElementById("msg-txt").value
                 };
@@ -520,7 +537,8 @@
                 limpar();
             } catch (error) {
                 console.error("Erro:", error);
-                alert('Erro ao processar a requisição. Tente novamente.');
+                cnpjField.classList.add("is-invalid");
+                return;
             } finally {
                 submitButton.disabled = false;
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
