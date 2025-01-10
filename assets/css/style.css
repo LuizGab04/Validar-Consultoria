@@ -84,6 +84,16 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+<<<<<<< Updated upstream
+=======
+    min-width: 570px;
+}
+@media (max-width: 768px) {
+    #parte2 {
+        width: 100% !important
+        
+    }
+>>>>>>> Stashed changes
 }
 
 #text-baixopt2 {
