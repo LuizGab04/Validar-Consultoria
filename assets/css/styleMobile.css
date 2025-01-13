@@ -1,0 +1,44 @@
+/* FORMATAÇÃO PARA RESOLUÇÕES MENORES*/
+@media (max-width: 375px) {
+    .header {
+        padding: 5px;
+    }
+
+    #logo-container {
+        margin-left: -40px;
+    }
+
+    #emailHeader {
+        padding-left: 10px;
+        font-size: 11px;
+    }
+
+    .logo-nome {
+        color: #FFF;
+        padding-top: 20px;
+        font-size: 13px;
+    }
+
+    #logo {
+        margin-left: 20px;
+        width: 35%;
+        max-width: 150px;
+        padding-top: 5px;
+    }
+
+    #parte1,
+    #parte2,
+    #parte3 {
+        width: 100%;
+        height: auto;
+    }
+
+    #rodape {
+        flex-direction: column;
+    }
+
+    #formulario {
+        width: 100%;
+        height: auto;
+    }
+}
