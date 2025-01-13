@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
 
     /* CSS geral */
     #parte1,
@@ -9,7 +9,6 @@
         width: 100%;
         height: auto;
     }
-
 
     /* HEADER */
     #cabecalho {
