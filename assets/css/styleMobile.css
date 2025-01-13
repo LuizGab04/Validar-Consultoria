@@ -1,31 +1,8 @@
-/* FORMATAÇÃO PARA RESOLUÇÕES MENORES*/
-@media (max-width: 375px) {
-    .header {
-        padding: 5px;
-    }
+@charset "UTF-8";
 
-    #logo-container {
-        margin-left: -40px;
-    }
+@media screen and (max-width: 768px) {
 
-    #emailHeader {
-        padding-left: 10px;
-        font-size: 11px;
-    }
-
-    .logo-nome {
-        color: #FFF;
-        padding-top: 20px;
-        font-size: 13px;
-    }
-
-    #logo {
-        margin-left: 20px;
-        width: 35%;
-        max-width: 150px;
-        padding-top: 5px;
-    }
-
+    /* CSS geral */
     #parte1,
     #parte2,
     #parte3 {
@@ -33,12 +10,260 @@
         height: auto;
     }
 
-    #rodape {
-        flex-direction: column;
+
+    /* HEADER */
+    #cabecalho {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        width: 100%;
+        height: 65px;
+        background-color: #000822;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    #logo-container {
+        display: flex;
+        align-items: center;
+        margin-left: -30px;
+    }
+
+    #emailHeader a {
+        color: #FFF;
+        padding-right: 5px;
+        text-decoration: none;
+    }
+
+    #logo img {
+        width: 100%;
+        max-width: 120px;
+        padding-top: 5px;
+    }
+
+    #nome-logo {
+        color: #FFF;
+        font-size: 15px;
+        margin-left: -45px;
+        padding-top: 10px;
+    }
+
+    /*parte 1*/
+    #parte1 {
+        background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-inner img {
+        width: 80% !important;
+    }
+
+    /*parte 2*/
+    #parte2 {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.70) 100%), url(../images/imagem-pt2.avif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    #text-baixopt2 {
+        text-align: justify;
+        width: 305px;
+    }
+
+    #container-pt2 {
+        display: flex;
+    }
+
+    #resumo-pt2 {
+        padding-left: 5px;
+        padding-top: 40px;
+        color: #2d4283;
+        margin-bottom: 50px;
+    }
+
+    #categorias {
+        padding-top: 0px;
+        padding-left: 18px;
+    }
+
+    #representacao,
+    #reestruturacao,
+    #capitacao,
+    #reestruturacaoCarteira,
+    #reestruturacaoAdm {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        background-color: #2d4283;
+        height: 70px;
+        margin-right: -12px;
+    }
+
+    #categorias img {
+        margin-left: -30px;
+        width: 100px;
+        height: 100px;
+    }
+
+    #logo-grande img,
+    #logo-p img {
+        display: none;
+    }
+
+    /*parte 3*/
+    #parte3 {
+        background-image: linear-gradient(to bottom, rgba(101, 142, 194, 0.95) 0%, rgba(101, 142, 194, 0.5) 100%), url(../images/business-coworkers-shaking-hands-meeting-office-focus-is-businessman.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        text-align: -webkit-center;
+
+    }
+
+    #container-formulario {
+        padding: 10px;
+        width: auto;
+        height: auto;
     }
 
     #formulario {
+        padding: 15px;
+        border: 3px solid white;
+        border-radius: 15px;
+        color: white;
         width: 100%;
-        height: auto;
+    }
+
+    #form-nome {
+        width: 205%;
+    }
+
+    #form-email,
+    #form-cnpj {
+        width: 105%;
+    }
+
+    /*rodape*/
+    #insta,
+    #linke,
+    #zap {
+        color: rgb(255, 255, 255);
+    }
+
+    #logo-container-footer {
+        display: flex;
+        align-items: center;
+        margin-left: 65px;
+        height: 100px;
+    }
+
+    #container-footer-esquerda {
+        padding-left: 130px;
+        padding-top: 10px;
+    }
+
+    #links-parceiros {
+        display: flex;
+        margin-left: 35px;
+        margin-bottom: -5px;
+        margin-top: -10px;
+    }
+
+    #safeweb img {
+        width: 150px;
+        margin-top: -16px;
+    }
+
+    #somapay img {
+        width: 150px;
+
+    }
+
+    #links {
+        margin-left: 15px;
+        margin-top: -20px;
+    }
+
+    #rodape {
+        color: #ffffff;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        background-color: #000822;
+
+    }
+
+    /* Estilo para a div que contém a imagem e o título */
+    .cookieConsentContainer {
+        z-index: 999;
+        width: 100%;
+        min-height: 20px;
+        box-sizing: border-box;
+        padding: 30px 30px 30px 30px;
+        background: linear-gradient(to bottom, rgba(101, 142, 194, 0.95) 0%, rgba(101, 142, 194, 0.5) 100%);
+        overflow: hidden;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: none
+    }
+
+    .cookieConsentContainer .cookieTitle a {
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        font-size: 22px;
+        line-height: 20px;
+        display: block
+    }
+
+    .cookieConsentContainer .cookieDesc p {
+        margin: 0;
+        padding: 0;
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        margin-top: 10px
+    }
+
+    .cookieConsentContainer .cookieDesc a {
+        font-family: OpenSans, arial, sans-serif;
+        color: #fff;
+        text-decoration: underline
+    }
+
+    .cookieConsentContainer .cookieButton a {
+        display: inline-block;
+        font-family: OpenSans, arial, sans-serif;
+
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 14px;
+        background: #ffc107;
+        box-sizing: border-box;
+        padding: 15px 24px;
+        text-align: center;
+        transition: background .3s
+    }
+
+    .cookieConsentContainer .cookieButton a:hover {
+        cursor: pointer;
+        background: #3e9b67
+    }
+
+
+    .cookieConsentContainer {
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
     }
 }
