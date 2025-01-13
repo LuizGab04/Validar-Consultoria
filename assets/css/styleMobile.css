@@ -122,6 +122,7 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
+        text-align: -webkit-center;
     }
 
     #container-formulario {
