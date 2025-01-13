@@ -5,8 +5,6 @@ body {
     overflow-x: hidd77en !important;
 }
 
-/*Primeira parte da pagina */
-
 #cabecalho {
     display: flex;
     align-items: center;
@@ -20,7 +18,7 @@ body {
 
 @media (max-width: 768px) {
     #cabecalho {
-        width: 100% !important
+        width: 768px !important;
     }
 }
 
@@ -53,6 +51,8 @@ body {
     padding-top: 7px;
 }
 
+/*Primeira parte da pagina */
+
 #parte1 {
     background-image: linear-gradient(to left, transparent 0%, #000822 80%), url(../images/image.png);
     /*Linear-gradient é uma camada para efeitos de fadeIn*/
@@ -65,7 +65,7 @@ body {
 
 @media (max-width: 768px) {
     #parte1 {
-        width: 100% !important
+        width: 768px !important;
     }
 }
 
@@ -81,15 +81,10 @@ body {
     background-repeat: no-repeat;
     min-width: 756px;
 }
-@media (max-width: 768px) {
-    #parte2 {
-        width: 100% !important
-    }
-}
+
 
 #text-baixopt2 {
     text-align: justify;
-    width: 310px;
 }
 
 #container-pt2 {
@@ -100,14 +95,11 @@ body {
     padding-top: 60px;
     color: #2d4283;
     margin-bottom: 50px;
-    max-width: 800px;
-    min-width: 320px;
 }
 
 #categorias {
     padding-top: 10px;
     padding-left: 30px;
-    min-width: 705px;
 }
 
 #representacao,
@@ -157,14 +149,10 @@ body {
     margin-left: 200px;
 }
 
-@media (max-width: 768px) {
-    #info-validar {
-        margin-left: -210px;
+@media (max-width: 768px){
+    #parte2 {
+        width: 768px !important;
     }
-}
-
-#info-validar {
-    padding-left: 250px;
 }
 
 /*/////////////////////////////////////////*/
@@ -180,7 +168,7 @@ body {
 }
 @media (max-width: 768px) {
     #parte3 {
-        width: 100% !important
+        width: 768px !important;
     }
 }
 
@@ -241,4 +229,10 @@ RODAPÉ
     justify-content: space-between;
     height: 100%;
     background-color: #000822;
+}
+
+@media (max-width: 768px) {
+    #rodape {
+        width: 768px !important;
+    }
 }
