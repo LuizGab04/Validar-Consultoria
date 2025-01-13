@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    min-width: 570px;
+    min-width: 756px;
     height: 65px;
     background-color: #000822;
     border-bottom: 2px solid #ffffff;
@@ -59,7 +59,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-width: 570px;
+    min-width: 756px;
     height: auto;
 }
 
@@ -79,7 +79,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-width: 570px;
+    min-width: 756px;
 }
 @media (max-width: 768px) {
     #parte2 {
@@ -107,7 +107,6 @@ body {
 #categorias {
     padding-top: 10px;
     padding-left: 30px;
-    min-width: 520px;
 }
 
 #representacao,
@@ -176,7 +175,7 @@ body {
     background-repeat: no-repeat;
     height: 100%;
     text-align: -webkit-center;
-    min-width: 570px;
+    min-width: 756px;
 }
 @media (max-width: 768px) {
     #parte3 {
@@ -234,7 +233,7 @@ RODAPÉ
 }
 
 #rodape {
-    min-width: 570px;
+    min-width: 756px;
     color: #ffffff;
     display: flex;
     align-items: center;

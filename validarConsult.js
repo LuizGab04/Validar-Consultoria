@@ -26,5 +26,4 @@ function limpar() {
     document.getElementById("faturamento").value = "";
     document.getElementById("cnpj").value = "";
     document.getElementById("msg-txt").value = "";
-
 }
