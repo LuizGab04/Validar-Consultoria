@@ -107,6 +107,7 @@ body {
 #categorias {
     padding-top: 10px;
     padding-left: 30px;
+    min-width: 705px;
 }
 
 #representacao,
