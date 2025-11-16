@@ -12,160 +12,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .cropped1 {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
+    <script src="validarConsult.js" defer></script>
 
-        /* ... seu CSS que já existe ... */
-
-        /* PARCERIAS */
-        #parcerias {
-            background: #ffffff;
-            padding: 15px 20px 15px;
-            ;
-            text-align: center;
-        }
-
-        #parcerias h2 {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #050a30;
-            margin-bottom: 35px;
-        }
-
-        .parcerias-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .parcerias-arrow {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            background: #ffde59;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .parcerias-arrow:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-        }
-
-        .parcerias-viewport {
-            max-width: 700px;
-            width: 100%;
-        }
-
-        .parcerias-track {
-            display: flex;
-            align-items: center;
-            /* centraliza verticalmente */
-            justify-content: center;
-            /* centraliza horizontalmente */
-            gap: 60px;
-        }
-
-        .parceria-item {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 110px;
-            /* altura fixa p/ alinhar tudo */
-            opacity: 0.4;
-        }
-
-        .parceria-item {
-            flex: 0 0 auto;
-            opacity: 0.4;
-        }
-
-        .parceria-item img {
-            max-width: 180px;
-            max-height: 90px;
-            object-fit: contain;
-            transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
-        }
-
-        /* itens não ativos: menores e mais apagados */
-        .parceria-item:not(.active) img {
-            transform: scale(0.9);
-            opacity: 0.5;
-        }
-
-        /* logo central (ativa): bem maior e com destaque */
-        .parceria-item.active {
-            opacity: 1;
-        }
-
-        .parceria-item.active img {
-            transform: scale(1.45);
-            /* 🔥 zoom forte */
-            opacity: 1;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            #parcerias h2 {
-                font-size: 26px;
-            }
-
-            .parcerias-wrapper {
-                gap: 15px;
-            }
-
-            .parcerias-track {
-                gap: 25px;
-            }
-
-            .parceria-item img {
-                max-width: 120px;
-            }
-
-            .parcerias-arrow {
-                width: 32px;
-                height: 32px;
-                font-size: 18px;
-            }
-
-            .parceria-item {
-                opacity: 0.6;
-                transition: transform 0.3s ease, opacity 0.3s ease;
-            }
-
-            .parceria-item img {
-                max-width: 180px;
-                max-height: 90px;
-                object-fit: contain;
-            }
-
-            /* logo central (ativa) maior */
-            .parceria-item.active {
-                opacity: 1;
-            }
-
-            .parceria-item.active img {
-                transform: scale(1.25);
-            }
-        }
-    </style>
+  
 </head>
 
 <body>
@@ -298,6 +147,50 @@
                 &gt;
             </button>
         </div>
+    </section>
+    <section>
+         <div class="slideshow">
+      <div class="carousel">
+        <div class="slide active">
+          <img src="assets\images\img_1.png" alt="Slide 1">
+          <div class="slide-text">Sou o Slide 1</div>
+        </div>
+        <div class="slide">
+          <img src="assets\images\img_2.png" alt="Slide 2">
+          <div class="slide-text">Sou o Slide 2</div>
+        </div>
+        <div class="slide">
+          <img src="assets\images\img_3.png" alt="Slide 3">
+          <div class="slide-text">Sou o Slide 3</div>
+        </div>
+        <div class="slide">
+          <img src="assets\images\img_4.png" alt="Slide 4">
+          <div class="slide-text">Sou o Slide 4</div>
+        </div>
+          <div class="slide">
+          <img src="assets\images\img_5.png" alt="Slide 5">
+          <div class="slide-text">Sou o Slide 4</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <a href="#" data-index="1" class="active">
+          <img src="img/control1.png" alt="Controle 1">
+        </a>
+        <a href="#" data-index="2">
+          <img src="img/control2.png" alt="Controle 2">
+        </a>
+        <a href="#" data-index="3">
+          <img src="img/control3.png" alt="Controle 3">
+        </a>
+        <a href="#" data-index="4">
+          <img src="img/control4.png" alt="Controle 4">
+        </a>
+          <a href="#" data-index="5">
+          <img src="img/control5.png" alt="Controle 5">
+        </a>
+      </div>
+    </div>
     </section>
     <section id="contato" class="py-5" style="background-color:#010A2C;">
         <div class="container">
