@@ -1,13 +1,3 @@
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 .slideshow {
   height: 100vh;
   background-color: antiquewhite;
@@ -19,14 +9,15 @@ html {
    SEMICÍRCULO VIRADO PARA A ESQUERDA
 ----------------------------------------- */
 .carousel {
-  width: 40rem;              /* metade do círculo */
-  height: 80rem;             /* altura total */
+  width: 40rem;
+  /* metade do círculo */
+  height: 80rem;
+  /* altura total */
   border: 7rem solid #eebe97;
   border-left: none;
   border-radius: 0 80rem 80rem 0;
-  position: absolute;
   top: 50%;
-  left: 0;
+  right: 480px;
   transform: translateY(-50%);
   overflow: visible;
 }
@@ -40,24 +31,41 @@ html {
   position: absolute;
 
   top: 50%;
-  right: -7rem;                     /* metade do slide → encosta na borda reta */
-  transform-origin: -33rem center;  /* 40rem (raio) - 7rem (meio do slide) */
+  right: -7rem;
+  /* metade do slide → encosta na borda reta */
+  transform-origin: -33rem center;
+  /* 40rem (raio) - 7rem (meio do slide) */
 
   transform: translateY(-50%);
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 /* Posições angulares (180° divididos em 4 partes iguais) */
-.slide:nth-child(1) { transform: translateY(-50%) rotate(-60deg); }
-.slide:nth-child(2) { transform: translateY(-50%) rotate(35deg); }
-.slide:nth-child(3) { transform: translateY(-50%) rotate(0deg); }
-.slide:nth-child(4) { transform: translateY(-50%) rotate(-30deg); }
-.slide:nth-child(5) { transform: translateY(-50%) rotate(60deg); }
+.slide:nth-child(1) {
+  transform: translateY(-50%) rotate(-60deg);
+}
+
+.slide:nth-child(2) {
+  transform: translateY(-50%) rotate(35deg);
+}
+
+.slide:nth-child(3) {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.slide:nth-child(4) {
+  transform: translateY(-50%) rotate(-30deg);
+}
+
+.slide:nth-child(5) {
+  transform: translateY(-50%) rotate(60deg);
+}
 
 /* Slide ativo centralizado */
 .slide.active {
   z-index: 20;
-  right: 0rem;  /* traz o slide para dentro do semicirculo */
+  right: 0rem;
+  /* traz o slide para dentro do semicirculo */
   transform: translateY(-50%) rotate(0deg) scale(1.8);
 }
 
@@ -73,9 +81,12 @@ html {
 /* Texto apenas no slide ativo */
 .slide-text {
   position: absolute;
-  top: 50%;                  /* centralizado verticalmente no slide */
-  left: 100%;                /* começa exatamente à direita do slide */
-  margin-left: 1rem;         /* um pequeno espaçamento */
+  top: 50%;
+  /* centralizado verticalmente no slide */
+  left: 100%;
+  /* começa exatamente à direita do slide */
+  margin-left: 1rem;
+  /* um pequeno espaçamento */
   transform: translateY(-50%);
   width: max-content;
   font-size: 2rem;
@@ -117,154 +128,154 @@ html {
 }
 
 .cropped1 {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
 
-        /* ... seu CSS que já existe ... */
+/* ... seu CSS que já existe ... */
 
-        /* PARCERIAS */
-        #parcerias {
-            background: #ffffff;
-            padding: 15px 20px 15px;
-            ;
-            text-align: center;
-        }
+/* PARCERIAS */
+#parcerias {
+  background: #ffffff;
+  padding: 15px 20px 15px;
+  ;
+  text-align: center;
+}
 
-        #parcerias h2 {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #050a30;
-            margin-bottom: 35px;
-        }
+#parcerias h2 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #050a30;
+  margin-bottom: 35px;
+}
 
-        .parcerias-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+.parcerias-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-        .parcerias-arrow {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: none;
-            background: #ffde59;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+.parcerias-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #ffde59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        .parcerias-arrow:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-        }
+.parcerias-arrow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
 
-        .parcerias-viewport {
-            max-width: 700px;
-            width: 100%;
-        }
+.parcerias-viewport {
+  max-width: 700px;
+  width: 100%;
+}
 
-        .parcerias-track {
-            display: flex;
-            align-items: center;
-            /* centraliza verticalmente */
-            justify-content: center;
-            /* centraliza horizontalmente */
-            gap: 60px;
-        }
+.parcerias-track {
+  display: flex;
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: center;
+  /* centraliza horizontalmente */
+  gap: 60px;
+}
 
-        .parceria-item {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 110px;
-            /* altura fixa p/ alinhar tudo */
-            opacity: 0.4;
-        }
+.parceria-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  /* altura fixa p/ alinhar tudo */
+  opacity: 0.4;
+}
 
-        .parceria-item {
-            flex: 0 0 auto;
-            opacity: 0.4;
-        }
+.parceria-item {
+  flex: 0 0 auto;
+  opacity: 0.4;
+}
 
-        .parceria-item img {
-            max-width: 180px;
-            max-height: 90px;
-            object-fit: contain;
-            transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
-        }
+.parceria-item img {
+  max-width: 180px;
+  max-height: 90px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
 
-        /* itens não ativos: menores e mais apagados */
-        .parceria-item:not(.active) img {
-            transform: scale(0.9);
-            opacity: 0.5;
-        }
+/* itens não ativos: menores e mais apagados */
+.parceria-item:not(.active) img {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
 
-        /* logo central (ativa): bem maior e com destaque */
-        .parceria-item.active {
-            opacity: 1;
-        }
+/* logo central (ativa): bem maior e com destaque */
+.parceria-item.active {
+  opacity: 1;
+}
 
-        .parceria-item.active img {
-            transform: scale(1.45);
-            /* 🔥 zoom forte */
-            opacity: 1;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
-        }
+.parceria-item.active img {
+  transform: scale(1.45);
+  /* 🔥 zoom forte */
+  opacity: 1;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
 
-        /* Responsivo */
-        @media (max-width: 768px) {
-            #parcerias h2 {
-                font-size: 26px;
-            }
+/* Responsivo */
+@media (max-width: 768px) {
+  #parcerias h2 {
+    font-size: 26px;
+  }
 
-            .parcerias-wrapper {
-                gap: 15px;
-            }
+  .parcerias-wrapper {
+    gap: 15px;
+  }
 
-            .parcerias-track {
-                gap: 25px;
-            }
+  .parcerias-track {
+    gap: 25px;
+  }
 
-            .parceria-item img {
-                max-width: 120px;
-            }
+  .parceria-item img {
+    max-width: 120px;
+  }
 
-            .parcerias-arrow {
-                width: 32px;
-                height: 32px;
-                font-size: 18px;
-            }
+  .parcerias-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
 
-            .parceria-item {
-                opacity: 0.6;
-                transition: transform 0.3s ease, opacity 0.3s ease;
-            }
+  .parceria-item {
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 
-            .parceria-item img {
-                max-width: 180px;
-                max-height: 90px;
-                object-fit: contain;
-            }
+  .parceria-item img {
+    max-width: 180px;
+    max-height: 90px;
+    object-fit: contain;
+  }
 
-            /* logo central (ativa) maior */
-            .parceria-item.active {
-                opacity: 1;
-            }
+  /* logo central (ativa) maior */
+  .parceria-item.active {
+    opacity: 1;
+  }
 
-            .parceria-item.active img {
-                transform: scale(1.25);
-            }
-        }
+  .parceria-item.active img {
+    transform: scale(1.25);
+  }
+}
