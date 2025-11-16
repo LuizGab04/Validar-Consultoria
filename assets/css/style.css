@@ -1,130 +1,106 @@
+/* =================== SLIDESHOW =================== */
+/* section do sol (semicírculo) */
 .slideshow {
-  height: 100vh;
-  background-color: antiquewhite;
-  position: relative;
+  /* mesmo fundo do site / seção */
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* 🔥 gruda na esquerda */
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
-/* ----------------------------------------
-   SEMICÍRCULO VIRADO PARA A ESQUERDA
------------------------------------------ */
+/* Semicírculo maior e um pouco “pra fora” da tela */
 .carousel {
-  width: 40rem;
-  /* metade do círculo */
-  height: 80rem;
-  /* altura total */
-  border: 7rem solid #eebe97;
+  width: 15rem;
+  height: 26rem;
+  border: 4rem solid #eebe97;
   border-left: none;
-  border-radius: 0 80rem 80rem 0;
-  top: 50%;
-  right: 480px;
-  transform: translateY(-50%);
-  overflow: visible;
+  border-radius: 0 26rem 26rem 0;
+  margin-left: -9rem;
+  /* 🔥 joga parte do círculo pra fora da esquerda */
 }
 
-/* ----------------------------------------
-   SLIDES ALINHADOS NO SEMICÍRCULO
------------------------------------------ */
+/* ---------- Slides no arco ---------- */
 .slide {
-  width: 14rem;
-  height: 14rem;
+  width: 8rem;
+  /* 🔥 bolinhas maiores */
+  height: 8rem;
   position: absolute;
-
   top: 50%;
-  right: -7rem;
-  /* metade do slide → encosta na borda reta */
-  transform-origin: -33rem center;
-  /* 40rem (raio) - 7rem (meio do slide) */
-
+  right: -4rem;
+  /* metade do slide encosta na borda reta */
+  transform-origin: -17rem center;
+  /* raio (~13rem) + metade do slide (4rem) */
   transform: translateY(-50%);
+  /* ângulo e scale vêm do JS */
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* Posições angulares (180° divididos em 4 partes iguais) */
-.slide:nth-child(1) {
-  transform: translateY(-50%) rotate(-60deg);
-}
-
-.slide:nth-child(2) {
-  transform: translateY(-50%) rotate(35deg);
-}
-
-.slide:nth-child(3) {
-  transform: translateY(-50%) rotate(0deg);
-}
-
-.slide:nth-child(4) {
-  transform: translateY(-50%) rotate(-30deg);
-}
-
-.slide:nth-child(5) {
-  transform: translateY(-50%) rotate(60deg);
-}
-
-/* Slide ativo centralizado */
 .slide.active {
   z-index: 20;
-  right: 0rem;
-  /* traz o slide para dentro do semicirculo */
-  transform: translateY(-50%) rotate(0deg) scale(1.8);
+  /* quem está no centro fica por cima */
 }
 
-/* Imagens */
+/* Imagem redonda */
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 100%;
-  transition: transform 0.5s ease;
+  border-radius: 50%;
 }
 
-/* Texto apenas no slide ativo */
+/* Texto aparece só no ativo */
 .slide-text {
+  height: 105px;
+  border-radius: 40px;
+  background-color: #d1d1d1;
   position: absolute;
   top: 50%;
-  /* centralizado verticalmente no slide */
   left: 100%;
-  /* começa exatamente à direita do slide */
-  margin-left: 1rem;
-  /* um pequeno espaçamento */
+  margin-left: -7rem;
   transform: translateY(-50%);
-  width: max-content;
-  font-size: 2rem;
+  width: calc(100% - -510px);
+  font-size: 10px;
   font-weight: bold;
-  color: #333;
+  color: #000;
+  /* fica melhor no fundo escuro */
   opacity: 0;
   transition: opacity 0.4s;
+  z-index: -1;
 }
 
 .slide.active .slide-text {
   opacity: 1;
 }
 
-/* ----------------------------------------
-   CONTROLES
------------------------------------------ */
-.controls {
-  position: absolute;
-  bottom: 3rem;
-  left: 55rem;
-  display: flex;
-  gap: 1rem;
-}
+/* --------- Responsivo --------- */
+@media (max-width: 768px) {
+  .slideshow {
+    padding: 24px 0;
+  }
 
-.controls a {
-  display: inline-block;
-  padding: 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
+  .carousel {
+    width: 18rem;
+    height: 18rem;
+    border-width: 3rem;
+    border-radius: 0 18rem 18rem 0;
+    margin-left: -6rem;
+    /* ainda um pouco pra fora no mobile */
+  }
 
-.controls a.active {
-  background: #7dbd77;
-}
+  .slide {
+    width: 6rem;
+    height: 6rem;
+    right: -3rem;
+    transform-origin: -12rem center;
+  }
 
-.controls img {
-  width: 6rem;
+  .slide-text {
+    font-size: 1.1rem;
+  }
 }
 
 .cropped1 {

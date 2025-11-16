@@ -1,54 +1,40 @@
-
-//QUESTÇAO DE SEGURANÇA -- ADICIONAR O CÓDIGO JS DO index.html no validarConsult.js
-
-function limpar() {
-    // Limpar os campos de texto
-    document.getElementById("nome").value = "";
-    document.getElementById("estado").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("ddd").value = "";
-    document.getElementById("telefone").value = "";
-    document.getElementById("cargo").value = "";
-    document.getElementById("faturamento").value = "";
-    document.getElementById("cnpj").value = "";
-    document.getElementById("msg-txt").value = "";
-}
-
 const slides = document.querySelectorAll(".slide");
-const controls = document.querySelectorAll(".controls a");
+const totalSlides = slides.length;
 
-let currentIndex = 2; // slide central inicial (3)
-let intervalId;
+// posições relativas ao centro: -2, -1, 0, 1, 2  => ângulos -60, -30, 0, 30, 60
+const positions = [-2, -1, 0, 1, 2];
+const stepAngle = 30; // 30 graus entre cada posição
 
-// Função para ativar slide e controle correspondente
-function setActive(index) {
-  // Remove ativo anterior
-  document.querySelector(".slide.active").classList.remove("active");
+let currentIndex = 2; // quem começa no centro (aqui o slide 3: índice 2)
+let intervalId = null;
 
-  // Ativa slide
-  slides[index].classList.add("active");
+// Atualiza ângulos e classe .active para TODOS os slides
+function updatePositions() {
+  slides.forEach((slide, i) => {
+    // slot 0..4 ao redor do arco, mudando conforme o currentIndex
+    const slot = (i - currentIndex + totalSlides) % totalSlides;
 
-  currentIndex = index; // atualiza índice atual
-}
+    // posição relativa (-2..2)
+    const pos = positions[slot];
 
-// Função para avançar o slide automaticamente
-function nextSlide() {
-  let nextIndex = (currentIndex + 1) % slides.length; // volta ao primeiro slide após o último
-  setActive(nextIndex);
-}
+    const angle = pos * stepAngle;
 
-// Ativa o slide inicial
-setActive(currentIndex);
+    // se estiver no centro (pos === 0) é o slide ativo
+    const isActive = pos === 0;
+    slide.classList.toggle("active", isActive);
 
-// Intervalo automático (troca de slide a cada 4 segundos)
-intervalId = setInterval(nextSlide, 4000);
-
-// Clique manual
-controls.forEach((ctrl, i) => {
-  ctrl.addEventListener("click", e => {
-    e.preventDefault();
-    clearInterval(intervalId); // para a rotação automática ao clicar
-    setActive(i);
-    intervalId = setInterval(nextSlide, 4000); // reinicia a rotação automática
+    // aplica rotação e zoom no ativo
+    const scale = isActive ? 1.3 : 1;
+    slide.style.transform = `translateY(-50%) rotate(${angle}deg) scale(${scale})`;
   });
-});
+}
+
+// avança para o próximo slide (sentido horário)
+function nextSlide() {
+  currentIndex = (currentIndex - 1) % totalSlides;
+  updatePositions();
+}
+
+// inicia
+updatePositions();
+intervalId = setInterval(nextSlide, 4000);
