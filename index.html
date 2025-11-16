@@ -13,489 +13,514 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        .representacao {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            /* Suaviza o destaque */
+        .cropped1 {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
         }
 
-        .representacao:hover {
-            transform: scale(1.01);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* ... seu CSS que já existe ... */
+
+        /* PARCERIAS */
+        #parcerias {
+            background: #ffffff;
+            padding: 15px 20px 15px;
+            ;
+            text-align: center;
         }
 
-        .caixa-texto {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #f7f7f7;
-            padding: 10px;
-            margin-top: 10px;
-            width: 90%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-            color: #555;
+        #parcerias h2 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #050a30;
+            margin-bottom: 35px;
         }
 
-        .representacao:hover .caixa-texto {
-            display: block;
-        }
-
-        .form-group {
+        .parcerias-wrapper {
             display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .form-group input {
+        .parcerias-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #ffde59;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .parcerias-arrow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .parcerias-viewport {
+            max-width: 700px;
             width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid white;
-            background-color: transparent;
-            color: white;
-            font-size: 1rem;
         }
 
-        .form-group ::placeholder {
-            color: rgba(255, 255, 255, 0.7);
+        .parcerias-track {
+            display: flex;
+            align-items: center;
+            /* centraliza verticalmente */
+            justify-content: center;
+            /* centraliza horizontalmente */
+            gap: 60px;
         }
 
-        .form-group {
-            border-color: #ffffff;
-            outline: none;
+        .parceria-item {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 110px;
+            /* altura fixa p/ alinhar tudo */
+            opacity: 0.4;
         }
 
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid white;
-            background-color: transparent;
-            color: white;
-            font-size: 1rem;
+        .parceria-item {
+            flex: 0 0 auto;
+            opacity: 0.4;
         }
 
-        .w-140 {
-            width: 140px;
+        .parceria-item img {
+            max-width: 180px;
+            max-height: 90px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
         }
 
-        #text-baixopt2 {
-            margin-top: -8px;
+        /* itens não ativos: menores e mais apagados */
+        .parceria-item:not(.active) img {
+            transform: scale(0.9);
+            opacity: 0.5;
         }
 
-        #container-formulario {
-            padding-top: 10px;
+        /* logo central (ativa): bem maior e com destaque */
+        .parceria-item.active {
+            opacity: 1;
         }
 
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid white;
-            background-color: transparent;
-            color: white;
-            font-size: 1rem;
-            resize: none;
+        .parceria-item.active img {
+            transform: scale(1.45);
+            /* 🔥 zoom forte */
+            opacity: 1;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
         }
 
-        textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-            text-align: justify;
-        }
+        /* Responsivo */
+        @media (max-width: 768px) {
+            #parcerias h2 {
+                font-size: 26px;
+            }
 
-        option {
-            color: #000000;
+            .parcerias-wrapper {
+                gap: 15px;
+            }
+
+            .parcerias-track {
+                gap: 25px;
+            }
+
+            .parceria-item img {
+                max-width: 120px;
+            }
+
+            .parcerias-arrow {
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
+            }
+
+            .parceria-item {
+                opacity: 0.6;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .parceria-item img {
+                max-width: 180px;
+                max-height: 90px;
+                object-fit: contain;
+            }
+
+            /* logo central (ativa) maior */
+            .parceria-item.active {
+                opacity: 1;
+            }
+
+            .parceria-item.active img {
+                transform: scale(1.25);
+            }
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="header" id="cabecalho">
-            <div id="logo-container">
-                <div id="logo">
-                    <img class="logo" src="assets\images\logou.png">
-                </div>
+        <div id="cabecalho" style=" display: flex;justify-content: space-between;align-items: center; background-color: #010A2C; padding: 15px 10px; border-bottom: 2px solid #ffde59;
+        ">
 
-                <div class="logo-nome" id="nome-logo">
-                    <p><strong>VALIDAR<br>CONSULTORIA</strong></p>
-                </div>
+            <!-- LOGO -->
+            <div id="logo-container">
+                <img src="assets/images/logo.png" style="height: 50px;" />
             </div>
-            <div id="emailHeader">
-                <a href="https://wa.me/5561991117168?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
-                    target="_blank"><i class="bi bi-whatsapp">&nbsp;<strong>Fale conosco</strong></i></a>
+
+            <!-- BOTÃO FALE CONOSCO -->
+            <div id="emailHeader"
+                style="background: linear-gradient(to right, #ffde59, #EDA300 80%); border-radius: 50px; padding: 0px 15px; display: flex; align-items: center;">
+                <a class="text-black d-flex"
+                    style="text-decoration: none; align-items: center; justify-content: center;font-size: 17px; font-weight: bold;"
+                    href="https://wa.me/5561991117168?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
+                    target="_blank">
+                    Fale Conosco
+                    <i class="bi bi-whatsapp text-success" style="margin-left: 8px;"></i>
+                </a>
             </div>
         </div>
     </header>
-    <main>
-        <div id="parte1">
-            <div id="container-pt1">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="assets/images/fadein3.png" class="d-block mx-auto w-50" alt="Slide">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="10000">
-                            <img src="assets\images\Missao.png" class="d-block mx-auto w-50" alt="Slide">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="10000">
-                            <img src="assets\images\pqValidar.png" class="d-block mx-auto w-50" alt="Slide">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="parte2">
-            <div id="container-pt2">
-                <div id="imgs-parte2">
-                    <div id="logo-p">
-                        <img src="assets\images\p-validar.png">
-                    </div>
+    <!-- SEÇÃO HERO -->
+    <section id="hero" style="
+        background-color: #010A2C;
+        padding: 0px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 50px;
+    ">
 
-                    <div id="logo-grande">
-                        <img src="assets\images\logo-grande.png">
-                    </div>
-                </div>
-                <div id="info-validar" class="container mb-4">
-                    <div id="resumo-pt2">
-                        <div id="text-cimapt2">
-                            <h5><strong>SE A SUA EMPRESA ENFRENTA...</strong><br></h5>
-                        </div>
-                        <div id="text-baixopt2">
-                            <h6>desafios financeiros como falta de controle de fluxo de caixa,
-                                dificuldade em reduzir custos, falhas no planejamento orçamentário.
-                                Então somos a solução perfeita para sua empresa e vamos fornecer:</h6>
-                        </div>
-                    </div>
-                    <div id="categorias">
-                        <!-- Primeiro elemento -->
-                        <div id="representacao" class="representacao mb-5">
-                            <img src="assets/images/img_2.png" alt="Imagem representativa">
-                            <h6 class="m-3">REESTRUTURAÇÃO<br>DE PASSIVOS</h6>
-                            <div class="caixa-texto">
-                                <Strong>O serviço equilibra obrigações financeiras com a
-                                    capacidade de pagamento da empresa, por meio de diagnóstico
-                                    econômico-financeiro e negociação com credores, reduzindo despesas e mantendo a
-                                    credibilidade.</Strong>
-                            </div>
-                        </div>
-                        <!-- Segundo elemento -->
-                        <div id="reestruturacao" class="representacao mb-5">
-                            <img src="assets/images/img_1.png" alt="Imagem de reestruturação de fluxo de caixa">
-                            <h6 class="m-3">REESTRUTURAÇÃO<br>DE FLUXO DE CAIXA</h6>
-                            <div class="caixa-texto">
-                                <Strong>Implementação de ferramentas e processos para gerenciar recebíveis e obrigações,
-                                    otimizando cobranças
-                                    e minimizando custos com juros e multas.</Strong>
-                            </div>
-                        </div>
-                        <!-- Terceiro elemento -->
-                        <div id="capitacao" class="representacao mb-5">
-                            <img src="assets/images/img_3.png" alt="Imagem de captação de recursos">
-                            <h6 class="m-3">CAPITAÇÃO DE RECURSOS</h6>
-                            <div class="caixa-texto">
-                                <Strong>Parcerias com bancos e fundos para acessar linhas de crédito, incluindo BNDES,
-                                    para melhorar o fluxo de caixa, financiar operações e expandir negócios.</Strong>
-                            </div>
-                        </div>
-                        <!-- Quarto elemento -->
-                        <div id="reestruturacaoCarteira" class="representacao mb-5">
-                            <img src="assets/images/img_4.png" alt="Imagem de reestruturação de carteira de recebíveis">
-                            <h6 class="m-3">REESTRUTURAÇÃO DE<br>CARTEIRA DE RECEBÍVEIS</h6>
-                            <div class="caixa-texto">
-                                <Strong>Conversão de vendas a prazo em capital imediato com parceiros financeiros,
-                                    promovendo liquidez e fluxo de caixa diário.</Strong>
-                            </div>
-                        </div>
-                        <!-- Quinto elemento -->
-                        <div id="reestruturacaoAdm" class="representacao mt-5">
-                            <img src="assets/images/img_5.png" alt="Imagem de reestruturação administrativa">
-                            <h6 class="m-3">REESTRUTURAÇÃO<br>ADMINISTRATIVA</h6>
-                            <div class="caixa-texto">
-                                <strong>Diagnóstico completo do negócio para implementar processos eficazes,
-                                    gerando indicadores de custo e eficiência, corrigindo falhas e
-                                    alinhando rotinas administrativas com objetivos estratégicos.</strong>
-                            </div>
-                        </div>
-                    </div>
+        <!-- LADO ESQUERDO: TEXTOS -->
+        <div id="hero-text" style="max-width: 600px; color: white;">
+
+            <img class="cropped1" src="assets/images/Design_sem_nome__1_-removebg-preview.png"
+                alt="Validar Consultoria Administrativa" style="width: 370px; margin-bottom: -35px;">
+
+            <h1 style="
+            font-size: 40px;
+            line-height: 1.3;
+            font-weight: 900;
+            padding-left: 30px;
+        ">
+                <span style="color: #ffde59;">Especializada em</span><span> Soluções</span>
+                <br>
+                <span>Empresariais<span style="color: #ffde59;"> Personalizadas</span></span>
+            </h1>
+
+            <p
+                style="margin-top: 25px; font-size: 18px; line-height: 1.6; color: #e0e0e0; padding-left: 30px; text-align: justify; width: 585px;">
+                Fundada por profissionais com vasta experiência no mercado corporativo.
+                Nosso foco está em impulsionar o sucesso dos nossos clientes por meio
+                de estratégias eficientes e inovadoras.
+            </p>
+
+            <!-- BOTÃO AGENDAR -->
+            <a href="https://wa.me/5561991117168?text=Gostaria%20de%20agendar%20uma%20reunião" target="_blank" style="
+                display: inline-flex;
+                align-items: center;
+                background: linear-gradient(to right, #ffde59, #EDA300 80%); 
+                color: #000;
+                padding: 12px 25px;
+                border-radius: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 30px;
+                text-decoration: none;
+                margin-left: 110px;
+            ">
+                Agende sua reunião
+                <i class="bi bi-whatsapp text-success" style="margin-left: 10px; font-size: 22px;"></i>
+            </a>
+
+        </div>
+
+        <!-- LADO DIREITO: IMAGEM -->
+        <div id="hero-img" style="
+                position: relative;
+                width: 35%;
+                max-width: 420px;
+                min-width: 280px;
+            ">
+            <!-- FAIXA AMARELA -->
+            <div style="
+                position: absolute;
+                left: 40px;
+                bottom: -20px;
+                width: calc(100% - 30px);
+                height: 88%;
+                background: #ffde59;
+                z-index: 1;
+                border-radius: 10px;">
+
+            </div>
+
+            <!-- IMAGEM RESPONSIVA -->
+            <img src="assets/images/reuniao.png" style="
+            width: 100%;
+            height: auto;
+            max-width: 420px;  /* 🔥 IMAGEM MENOR */
+            border-radius: 15px;
+            position: relative;
+            z-index: 2;">
+        </div>
+
+    </section>
+    <section id="parcerias">
+        <h2>PARCERIAS</h2>
+
+        <div class="parcerias-wrapper">
+            <!-- seta esquerda -->
+            <button class="parcerias-arrow" id="prevParceria">
+                &lt;
+            </button>
+
+            <!-- área das logos -->
+            <div class="parcerias-viewport">
+                <div class="parcerias-track">
+                    <!-- O JS vai preencher isso -->
                 </div>
             </div>
+
+            <!-- seta direita -->
+            <button class="parcerias-arrow" id="nextParceria">
+                &gt;
+            </button>
         </div>
-        <div id="parte3">
-            <div id="container-formulario" class="pb-5">
-                <div id="formulario">
-                    <h3>CADASTRO</h3>
-                    <form method="POST" onsubmit="SendMail(event)">
-                        <div id="cadastro">
-                            <div class="form-group">
-                                <div id="form-nome">
-                                    <input type="text" class="form-control" id="nome" placeholder="NOME" required>
+    </section>
+    <section id="contato" class="py-5" style="background-color:#010A2C;">
+        <div class="container">
+            <div class="row justify-content-center g-4 align-items-stretch">
+
+                <div class="col-lg-5">
+                    <div class="bg-white rounded-4 shadow p-4 p-md-4 h-100 d-flex flex-column">
+
+                        <form id="contatoForm" class="mt-2">
+                            <div class="row g-3">
+
+                                <!-- NOME COMPLETO - ocupa a linha toda -->
+                                <div class="col-12">
+                                    <label for="nomeCompleto" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Nome completo:
+                                    </label>
+                                    <input type="text" id="nomeCompleto"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="Digite seu nome completo">
                                 </div>
-                                <div id="form-estado">
-                                    <select id="estado" required>
-                                        <option value="" disabled selected>ESTADO</option>
-                                        <option value="AC">Acre (AC)</option>
-                                        <option value="AL">Alagoas (AL)</option>
-                                        <option value="AP">Amapá (AP)</option>
-                                        <option value="AM">Amazonas (AM)</option>
-                                        <option value="BA">Bahia (BA)</option>
-                                        <option value="CE">Ceará (CE)</option>
-                                        <option value="DF">Distrito Federal (DF)</option>
-                                        <option value="ES">Espírito Santo (ES)</option>
-                                        <option value="GO">Goiás (GO)</option>
-                                        <option value="MA">Maranhão (MA)</option>
-                                        <option value="MT">Mato Grosso (MT)</option>
-                                        <option value="MS">Mato Grosso do Sul (MS)</option>
-                                        <option value="MG">Minas Gerais (MG)</option>
-                                        <option value="PA">Pará (PA)</option>
-                                        <option value="PB">Paraíba (PB)</option>
-                                        <option value="PR">Paraná (PR)</option>
-                                        <option value="PE">Pernambuco (PE)</option>
-                                        <option value="PI">Piauí (PI)</option>
-                                        <option value="RJ">Rio de Janeiro (RJ)</option>
-                                        <option value="RN">Rio Grande do Norte (RN)</option>
-                                        <option value="RS">Rio Grande do Sul (RS)</option>
-                                        <option value="RO">Rondônia (RO)</option>
-                                        <option value="RR">Roraima (RR)</option>
-                                        <option value="SC">Santa Catarina (SC)</option>
-                                        <option value="SP">São Paulo (SP)</option>
-                                        <option value="SE">Sergipe (SE)</option>
-                                        <option value="TO">Tocantins (TO)</option>
+
+                                <div class="col-12">
+                                    <label for="emailCompleto" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Email:
+                                    </label>
+                                    <input type="email" id="emailCompleto"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="Digite seu Email">
+                                </div>
+
+                                <!-- TELEFONE E TIPO EMPRESA: metade/metade -->
+                                <div class="col-12 col-md-6">
+                                    <label for="telefoneContato"
+                                        class="form-label small fw-semibold text-uppercase mb-1">
+                                        Telefone para contato:
+                                    </label>
+                                    <input type="tel" id="telefoneContato"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="(DDD) 99999-9999">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="tipoEmpresa" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Tipo de empresa:
+                                    </label>
+                                    <select id="tipoEmpresa" class="form-select form-select-sm rounded-pill">
+                                        <option value="">Selecione</option>
+                                        <option>MEI</option>
+                                        <option>Microempresa</option>
+                                        <option>Pequena Empresa</option>
+                                        <option>Média Empresa</option>
+                                        <option>Grande Empresa</option>
                                     </select>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div id="form-email">
-                                    <input type="email" class="form-control" id="email" placeholder="EMAIL CORPORATIVO"
-                                        required>
+
+                                <!-- CNPJ E ESTADO -->
+                                <div class="col-12 col-md-6">
+                                    <label for="cnpj" class="form-label small fw-semibold text-uppercase mb-1">
+                                        CNPJ:
+                                    </label>
+                                    <input type="text" id="cnpj" class="form-control form-control-sm rounded-pill"
+                                        placeholder="00.000.000/0000-00">
                                 </div>
-                            </div>
-                            <div id="celular" class="form-group">
-                                <div id="form-ddd">
-                                    <input type="text" class="form-control" id="ddd" placeholder="DDD" required>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="estado" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Estado:
+                                    </label>
+                                    <select id="estado" class="form-select form-select-sm rounded-pill">
+                                        <option value="">UF</option>
+                                        <option>DF</option>
+                                        <option>GO</option>
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                    </select>
                                 </div>
-                                <div id="form-telefone">
-                                    <input type="tel" class="form-control" id="telefone" placeholder="CELULAR" required>
+
+                                <!-- MOTIVO - linha inteira -->
+                                <div class="col-12">
+                                    <label for="motivo" class="form-label small fw-semibold text-uppercase mb-1">
+                                        O que levou sua empresa a buscar nossos serviços?
+                                    </label>
+                                    <textarea id="motivo" class="form-control form-control-sm rounded-4" rows="4"
+                                        placeholder="Conte um pouco sobre os desafios atuais da sua empresa..."></textarea>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div id="form-cargo">
-                                    <input type="text" class="form-control" id="cargo" placeholder="CARGO" required>
+
+                                <!-- BOTÃO -->
+                                <div class="col-12">
+                                    <button type="submit"
+                                        class="btn w-100 rounded-pill fw-bold d-flex align-items-center justify-content-center mt-1"
+                                        style="background: linear-gradient(to right, #ffde59, #EDA300 80%); border:none; font-size:18px;">
+                                        Solicite Contato
+                                        <i class="bi bi-whatsapp text-success ms-2" style="font-size:22px;"></i>
+                                    </button>
                                 </div>
-                                <div id="form-faturamento">
-                                    <input type="text" class="form-control" name="faturamento" id="faturamento"
-                                        placeholder="FATURAMENTO" required>
-                                </div>
+
                             </div>
-                            <div class="form-group">
-                                <div id="form-cnpj">
-                                    <input type="text" class="form-control" id="cnpj" placeholder="CNPJ" required>
-                                </div>
-                            </div>
-                            <div id="mensagem-container">
-                                <textarea id="msg-txt" rows="5" cols="33" class=""
-                                    placeholder="O QUE LEVOU SUA EMPRESA A BUSCAR NOSSOS SERVIÇOS? POR FAVOR, RELATE AS NECESSIDADES DA EMPRESA E COMO PODEMOS AUXILIÁ-LO."></textarea>
-                            </div>
-                            <div id="form-group" class="pt-2">
-                                <div id="botaoEnviar">
-                                    <button type="submit" class="btn btn-warning" id="submitButton">FALE COM UM
-                                        ESPECIALISTA<span class="spinner"></span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+
+                    </div>
                 </div>
+
+                <!-- COLUNA DIREITA: TEXTO -->
+                <div class="col-lg-7 text-white text-center text-lg-start">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+
+                        <h3 class="fw-bold mb-3" style="color:#ffde59;">
+                            Se sua empresa enfrenta:
+                        </h3>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-start mb-2 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Falta de controle no fluxo de caixa</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Dificuldade para reduzir custos sem perder eficiência</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-4 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Falhas no planejamento orçamentário que travam seu crescimento</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="fw-bold mb-2" style="color:#ffde59;">
+                            Nós somos a solução que você procura!
+                        </h3>
+                        <p class="mb-3">
+                            Com estratégias personalizadas e um acompanhamento próximo, ajudaremos sua empresa a:
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="d-flex align-items-start mb-2 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Recuperar o controle financeiro</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Reduzir custos de forma inteligente</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-4 justify-content-center justify-content-lg-start">
+                                <i class="bi bi-check2-square text-warning me-2 fs-5"></i>
+                                <span>Criar planejamentos que realmente funcionam</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="fw-bold mb-1" style="color:#ffde59;">
+                            Solicite o seu contato hoje
+                        </h3>
+                        <p class="mb-0">
+                            e descubra como sua empresa pode crescer com segurança e confiança!
+                        </p>
+
+                    </div>
+                </div>
+
             </div>
         </div>
-    </main>
-    <footer>
-        <div id="rodape">
-            <div id="logo-container-footer">
-                <div id="logo">
-                    <img src="assets\images\logou.png">
-                </div>
-                <div id="nome-logo">
-                    <h5><strong>VALIDAR<br>CONSULTORIA</strong></h5>
-                </div>
-            </div>
-            <div id="links-parceiros">
-                <div id="safeweb">
-                    <a href="https://safeweb.com.br"><img src="assets/images/safeweb.png"></a>
-                </div>
-                <div id="somapay">
-                    <a href="https://somapay.com.br"><img src="assets/images/somapay.png"></a>
-                </div>
-            </div>
-            <div id="container-footer-esquerda">
-                <div id="contat">
-                    <p><strong>CONTATE-NOS</strong></p>
-                </div>
-                <div id="links">
-                    <a id="insta" href="https://www.instagram.com/validarconsultoria/" target="_blank"><i
-                            class="px-1 bi bi-instagram"></i></a>
-                    <a id="linke"
-                        href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/?originalSubdomain=br"
-                        target="_blank"><i class="px-1 bi bi-linkedin"></i></a>
-                    <a id="zap"
-                        href="https://wa.me/5561991669316?text=Gostaria%20de%20entrar%20em%20contato%20com%20um%20especialista."
-                        target="_blank"><i class="px-1 bi bi-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="modal fade" id="modalCookies" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Política de Privacidade</strong></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" style="max-height: 580px; overflow: auto;">
-                    <h6>Este Site recolhe alguns Dados Pessoais dos Usuários.
-                        Este documento pode ser impresso para fins de consulta, através do comando imprimir nas
-                        configurações de seu navegador.
-                    </h6>
-                    <h6>Proprietário e Controlador de Dados
-                        Josimar Cordeiro Validar Consultoria
-                        E-mail de contato do Proprietário: <strong>consultor02@validarconsultoria.com.br</strong>
-                    </h6>
-                    <h3>Tipos de Dados coletados</h3>
-                    <h6>Entre os tipos de Dados Pessoais que este Site coleta, por si mesmo ou através de
-                        terceiros,
-                        existem:
-                        <strong>e-mail; Dados de uso; Rastreadores; número de Usuários; estatísticas da sessão.</strong>
-                    </h6>
-                    <h6>Detalhes completos sobre cada tipo de Dados Pessoais coletados são fornecidos nas seções
-                        dedicadas
-                        desta política de privacidade ou por textos explicativos específicos exibidos antes da
-                        coleta de
-                        Dados.
-                    </h6>
-                    <h6>Os Dados Pessoais poderão ser fornecidos livremente pelo Usuário, ou, no caso dos Dados
-                        de
-                        Utilização, coletados automaticamente ao se utilizar este Site.
-                    </h6>
-                    <h6>A menos que especificado diferentemente todos os Dados solicitados por este Site
-                        são
-                        obrigatórios e a falta de fornecimento destes Dados poderá impossibilitar este
-                        Aplicativo de
-                        fornecer os seus Serviços.
-                    </h6>
-                    <h6>
-                        Nos casos em que este Site afirmar especificamente que
-                        alguns Dados
-                        não forem obrigatórios, os Usuários ficam livres para deixarem de comunicar estes Dados
-                        sem nenhuma
-                        consequência para a disponibilidade ou o funcionamento do Serviço.
-                    </h6>
-                    <h6>Os Usuários que tiverem dúvidas a respeito de quais Dados Pessoais são obrigatórios
-                        estão convidados
-                        a entrar em contato com o Proprietário.
-                    </h6>
-                    <h6>Quaisquer usos de cookies – ou de outras ferramentas de rastreamento – por este
-                        Site ou pelos
-                        proprietários de serviços terceiros utilizados por este Site serão para a
-                        finalidade de
-                        fornecer os Serviços solicitados pelo Usuário, além das demais finalidades descritas no
-                        presente
-                        documentoe na Política de Cookies.
-                    </h6>
-                    <h6>Os Usuários ficam responsáveis por quaisquer Dados Pessoais de terceiros que forem
-                        obtidos,
-                        publicados ou compartilhados através deste Serviço (Site).
-                    </h6><br>
-                    <h2>Modo e local de processamento dos Dados</h2><br>
-                    <h3>Método de processamento</h3>
-                    <h6>O Proprietário tomará as medidas de segurança adequadas para impedir o acesso não
-                        autorizado,
-                        divulgação, alteração ou destruição não autorizada dos Dados.
-                    </h6>
-                    <h6>O processamento dos Dados é realizado utilizando computadores e /ou ferramentas de TI
-                        habilitadas,
-                        seguindo procedimentos organizacionais e meios estritamente relacionados com os fins
-                        indicados. Além
-                        do Proprietário, em alguns casos, os Dados podem ser acessados por certos tipos de
-                        pessoas
-                        encarregadas, envolvidas com a operação deste Serviço (este Site) (administração,
-                        vendas,
-                        marketing, administração legal do sistema) ou pessoas externas (como fornecedores
-                        terceirizados de
-                        serviços técnicos, carteiros, provedores de hospedagem, empresas de TI, agências de
-                        comunicação)
-                        nomeadas, quando necessário, como Processadores de Dados por parte do Proprietário. A
-                        lista
-                        atualizada destas partes pode ser solicitada ao Proprietário a qualquer momento.
-                    </h6>
-                    <h6>Os dados são processados ​​nas sedes de operação dos Proprietários, e em quaisquer
-                        outros
-                        lugares
-                        onde as partes envolvidas com o processamento estiverem localizadas.
-                        Dependendo da localização do Usuário as transferências de dados poderão envolver a
-                        transferência dos
-                        Dados do Usuário para outro país que não seja o seu. Para descobrirem mais sobre o local
-                        de
-                        processamento de tais Dados transferidos os Usuários poderão verificar a seção contendo
-                        os
-                        detalhes
-                        sobre o processamento de Dados Pessoais.
-                    </h6>
-                    <h3>Período de conservação</h3>
-                    <h6>
-                        Salvo especificação em contrário neste documento, os Dados Pessoais serão tratados e
-                        armazenados
-                        pelo tempo necessário para as finalidades para as quais foram coletados, e poderão ser
-                        retidos por
-                        mais tempo em razão de qualquer obrigação legal aplicável ou com base no consentimento
-                        dos
-                        Usuários.
-                    </h6>
-                    <h3>As finalidades do processamento</h3>
-                    <h6>Os Dados relativos ao Usuário são coletados para permitir que o Proprietário preste seu
-                        Serviço,
-                        cumpra suas obrigações legais, responda a solicitações de execução, proteja seus
-                        direitos e
-                        interesses (ou aqueles de seus Usuários ou terceiros), detecte qualquer atividade
-                        maliciosa
-                        ou
-                        fraudulenta, assim como:
-                        Contatar o Usuário e Estatísticas.</h6>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Aceitar Cookies</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="validarConsult.js"></script>
+    </section>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script>
+        // Carrossel de Parcerias - 3 logos visíveis, centro maior
+        (function () {
+            const logos = [
+                {
+                    src: 'assets/images/tothemoon.png',
+                    alt: 'To The Moon'
+                },
+                {
+                    src: 'assets/images/safeweb.png',
+                    alt: 'Safeweb'
+                },
+                {
+                    src: 'assets/images/somapay.png',
+                    alt: 'Somapay'
+                }
+                // Se tiver mais parceiros, adiciona aqui
+            ];
+
+            const track = document.querySelector('.parcerias-track');
+            const prevBtn = document.getElementById('prevParceria');
+            const nextBtn = document.getElementById('nextParceria');
+
+            if (!track || logos.length === 0) return;
+
+            let currentIndex = 0; // "ativo" (fica no centro)
+
+            function renderParcerias() {
+                const total = logos.length;
+
+                // índice anterior e próximo (carrossel infinito)
+                const prevIndex = (currentIndex - 1 + total) % total;
+                const nextIndex = (currentIndex + 1) % total;
+
+                const visible = [prevIndex, currentIndex, nextIndex];
+
+                track.innerHTML = visible.map((idx) => {
+                    const logo = logos[idx];
+                    const isActive = idx === currentIndex;
+
+                    return `
+                    <div class="parceria-item ${isActive ? 'active' : ''}">
+                        <img src="${logo.src}" alt="${logo.alt}">
+                    </div>
+                `;
+                }).join('');
+            }
+
+            renderParcerias();
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + logos.length) % logos.length;
+                renderParcerias();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % logos.length;
+                renderParcerias();
+            });
+        })();
+    </script>
+
+    <script>
+        /*
         (function () {
             emailjs.init({
                 publicKey: "vbs_72Vbnf7a3pJLt",
@@ -572,6 +597,7 @@
                 submitButton.textContent = "FALE COM UM ESPECIALISTA";
             }
         }
+            */
     </script>
 </body>
 
