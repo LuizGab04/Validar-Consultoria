@@ -11,10 +11,7 @@
   position: relative;
   width: 100%;
 
-  background-image: url("assets\images\fundoCarrossel.png");
-  background-size: cover;       /* Preenche a área */
-  background-position: center;  /* Centraliza */
-  background-repeat: no-repeat;
+  
   
 }
 
