@@ -7,7 +7,6 @@
     <title>ValidarConsultoria</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css" media="all">
-    <link rel="stylesheet" href="assets/css/styleMobile.css" media=" screen and (max-width: 768px)">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -149,134 +148,53 @@
         </div>
     </section>
     <section style="background: linear-gradient(to bottom, #000, #0d0d40 80%);">
+        <div style="max-width:1120px;margin:0 auto;padding:40px 40px 0;">
+            <h2 style="color:#ffde59;font-size:40px;font-weight:900;margin:0 0 20px;">
+                Trabalhamos com:
+            </h2>
+        </div>
         <div class="slideshow">
             <div class="carousel">
                 <div class="slide active">
                     <img src="assets/images/img_1.png" alt="Slide 1">
-                    <div class="slide-text">Implementação de ferramentas e processos para gerenciar recebíveis e obrigações, otimizando cobranças e minimizando custos com juros e multas.</div>
+                    <div class="slide-text">Implementação de ferramentas e processos para gerenciar recebíveis e
+                        obrigações, otimizando cobranças e minimizando custos com juros e multas.</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/img_2.png" alt="Slide 2">
-                    <div class="slide-text">O serviço equilibra obrigações financeiras com a capacidade de pagamento da empresa, por meio de diagnóstico econômico-financeiro e negociação com credores, reduzindo despesas e mantendo a credibilidade.</div>
+                    <div class="slide-text">O serviço equilibra obrigações financeiras com a capacidade de pagamento da
+                        empresa, por meio de diagnóstico econômico-financeiro e negociação com credores, reduzindo
+                        despesas e mantendo a credibilidade.</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/img_3.png" alt="Slide 3">
-                    <div class="slide-text">Conversão de vendas a prazo em capital imediato com parceiros financeiros, provendo liquidez e fluxo de caixa diário.</div>
+                    <div class="slide-text">Conversão de vendas a prazo em capital imediato com parceiros financeiros,
+                        provendo liquidez e fluxo de caixa diário.</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/img_4.png" alt="Slide 4">
-                    <div class="slide-text">Parcerias com bancos e fundos para acessar linhas de crédito, incluindo BNDES, para melhorar o fluxo de caixa, financiar operações e expandir negócios.</div>
+                    <div class="slide-text">Parcerias com bancos e fundos para acessar linhas de crédito, incluindo
+                        BNDES, para melhorar o fluxo de caixa, financiar operações e expandir negócios.</div>
                 </div>
                 <div class="slide">
                     <img src="assets/images/img_5.png" alt="Slide 5">
-                    <div class="slide-text">Diagnóstico completo do negócio para implementar processos eficazes, gerando indicadores de custo e eficiência, corrigindo falhas e alinhando rotinas administrativas com objetivos estratégicos.</div>
+                    <div class="slide-text">Diagnóstico completo do negócio para implementar processos eficazes, gerando
+                        indicadores de custo e eficiência, corrigindo falhas e alinhando rotinas administrativas com
+                        objetivos estratégicos.</div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="contato" class="py-5" style="background: linear-gradient(to bottom, #000, #0d0d40 80%);">
+    <section id="contato" class="py-5" style="background-color:#010A2C;">
         <div class="container">
             <div class="row justify-content-center g-4 align-items-stretch">
 
-                <div class="col-lg-5">
-                    <div class="bg-white rounded-4 shadow p-4 p-md-4 h-100 d-flex flex-column">
-
-                        <form id="contatoForm" class="mt-2">
-                            <div class="row g-3">
-
-                                <!-- NOME COMPLETO - ocupa a linha toda -->
-                                <div class="col-12">
-                                    <label for="nomeCompleto" class="form-label small fw-semibold text-uppercase mb-1">
-                                        Nome completo:
-                                    </label>
-                                    <input type="text" id="nomeCompleto"
-                                        class="form-control form-control-sm rounded-pill"
-                                        placeholder="Digite seu nome completo">
-                                </div>
-
-                                <div class="col-12">
-                                    <label for="emailCompleto" class="form-label small fw-semibold text-uppercase mb-1">
-                                        Email:
-                                    </label>
-                                    <input type="email" id="emailCompleto"
-                                        class="form-control form-control-sm rounded-pill"
-                                        placeholder="Digite seu Email">
-                                </div>
-
-                                <!-- TELEFONE E TIPO EMPRESA: metade/metade -->
-                                <div class="col-12 col-md-6">
-                                    <label for="telefoneContato"
-                                        class="form-label small fw-semibold text-uppercase mb-1">
-                                        Telefone para contato:
-                                    </label>
-                                    <input type="tel" id="telefoneContato"
-                                        class="form-control form-control-sm rounded-pill"
-                                        placeholder="(DDD) 99999-9999">
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="tipoEmpresa" class="form-label small fw-semibold text-uppercase mb-1">
-                                        Tipo de empresa:
-                                    </label>
-                                    <select id="tipoEmpresa" class="form-select form-select-sm rounded-pill">
-                                        <option value="">Selecione</option>
-                                        <option>MEI</option>
-                                        <option>Microempresa</option>
-                                        <option>Pequena Empresa</option>
-                                        <option>Média Empresa</option>
-                                        <option>Grande Empresa</option>
-                                    </select>
-                                </div>
-
-                                <!-- CNPJ E ESTADO -->
-                                <div class="col-12 col-md-6">
-                                    <label for="cnpj" class="form-label small fw-semibold text-uppercase mb-1">
-                                        CNPJ:
-                                    </label>
-                                    <input type="text" id="cnpj" class="form-control form-control-sm rounded-pill"
-                                        placeholder="00.000.000/0000-00">
-                                </div>
-
-                                <div class="col-12 col-md-6">
-                                    <label for="estado" class="form-label small fw-semibold text-uppercase mb-1">
-                                        Estado:
-                                    </label>
-                                    <select id="estado" class="form-select form-select-sm rounded-pill">
-                                        <option value="">UF</option>
-                                        <option>DF</option>
-                                        <option>GO</option>
-                                        <option>SP</option>
-                                        <option>RJ</option>
-                                    </select>
-                                </div>
-
-                                <!-- MOTIVO - linha inteira -->
-                                <div class="col-12">
-                                    <label for="motivo" class="form-label small fw-semibold text-uppercase mb-1">
-                                        O que levou sua empresa a buscar nossos serviços?
-                                    </label>
-                                    <textarea id="motivo" class="form-control form-control-sm rounded-4" rows="4"
-                                        placeholder="Conte um pouco sobre os desafios atuais da sua empresa..."></textarea>
-                                </div>
-
-                                <!-- BOTÃO -->
-                                <div class="col-12">
-                                    <button type="submit"
-                                        class="btn w-100 rounded-pill fw-bold d-flex align-items-center justify-content-center mt-1"
-                                        style="background: linear-gradient(to right, #ffde59, #EDA300 80%); border:none; font-size:18px;">
-                                        Solicite Contato
-                                        <i class="bi bi-whatsapp text-success ms-2" style="font-size:22px;"></i>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-
-                <!-- COLUNA DIREITA: TEXTO -->
-                <div class="col-lg-7 text-white text-center text-lg-start" style="padding-left: 85px;">
+                <!-- COLUNA DIREITA (TEXTOS) 
+           🔹Fica PRIMEIRO no mobile (order-1)
+           🔹Fica SEGUNDO no desktop (order-lg-2)
+      -->
+                <div class="col-lg-7 text-white text-center text-lg-start order-1 order-lg-2"
+                    style="padding-left: 85px;">
                     <div class="h-100 d-flex flex-column justify-content-center">
 
                         <h3 class="fw-bold mb-3" style="color:#ffde59;">
@@ -324,6 +242,101 @@
                         <p class="mb-0">
                             e descubra como sua empresa pode crescer com segurança e confiança!
                         </p>
+
+                    </div>
+                </div>
+
+                <!-- COLUNA ESQUERDA (FORMULÁRIO)
+           🔹Fica SEGUNDO no mobile (order-2)
+           🔹Fica PRIMEIRO no desktop (order-lg-1)
+      -->
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="bg-white rounded-4 shadow p-4 p-md-4 h-100 d-flex flex-column">
+
+                        <form id="contatoForm" class="mt-2">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="nomeCompleto" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Nome completo:
+                                    </label>
+                                    <input type="text" id="nomeCompleto"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="Digite seu nome completo">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="emailCompleto" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Email:
+                                    </label>
+                                    <input type="email" id="emailCompleto"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="Digite seu Email">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="telefoneContato"
+                                        class="form-label small fw-semibold text-uppercase mb-1">
+                                        Telefone para contato:
+                                    </label>
+                                    <input type="tel" id="telefoneContato"
+                                        class="form-control form-control-sm rounded-pill"
+                                        placeholder="(DDD) 99999-9999">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="tipoEmpresa" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Tipo de empresa:
+                                    </label>
+                                    <select id="tipoEmpresa" class="form-select form-select-sm rounded-pill">
+                                        <option value="">Selecione</option>
+                                        <option>MEI</option>
+                                        <option>Microempresa</option>
+                                        <option>Pequena Empresa</option>
+                                        <option>Média Empresa</option>
+                                        <option>Grande Empresa</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="cnpj" class="form-label small fw-semibold text-uppercase mb-1">
+                                        CNPJ:
+                                    </label>
+                                    <input type="text" id="cnpj" class="form-control form-control-sm rounded-pill"
+                                        placeholder="00.000.000/0000-00">
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="estado" class="form-label small fw-semibold text-uppercase mb-1">
+                                        Estado:
+                                    </label>
+                                    <select id="estado" class="form-select form-select-sm rounded-pill">
+                                        <option value="">UF</option>
+                                        <option>DF</option>
+                                        <option>GO</option>
+                                        <option>SP</option>
+                                        <option>RJ</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="motivo" class="form-label small fw-semibold text-uppercase mb-1">
+                                        O que levou sua empresa a buscar nossos serviços?
+                                    </label>
+                                    <textarea id="motivo" class="form-control form-control-sm rounded-4" rows="4"
+                                        placeholder="Conte um pouco sobre os desafios atuais da sua empresa..."></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit"
+                                        class="btn w-100 rounded-pill fw-bold d-flex align-items-center justify-content-center mt-1"
+                                        style="background: linear-gradient(to right, #ffde59, #EDA300 80%); border:none; font-size:18px;">
+                                        Solicite Contato
+                                        <i class="bi bi-whatsapp text-success ms-2" style="font-size:22px;"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
 
                     </div>
                 </div>
@@ -476,30 +489,32 @@
     </script>
 </body>
 <footer>
-  <div class="footer-left">
-    <img src="assets\images\Design_sem_nome__1_-removebg-preview.png" alt="Validar Consultoria" />
-  </div>
+    <div class="footer-left">
+        <img src="assets\images\Design_sem_nome__1_-removebg-preview.png" alt="Validar Consultoria" />
+    </div>
 
-  <div class="footer-text">
-    © 2023 Validar Consultoria - Todos os direitos reservados<br />
-    CNPJ: 29.527.538/0001-69
-  </div>
+    <div class="footer-text">
+        © 2023 Validar Consultoria - Todos os direitos reservados<br />
+        CNPJ: 29.527.538/0001-69
+    </div>
 
- <div class="footer-social">
-  <div class="social-label">REDES SOCIAIS</div>
+    <div class="footer-social">
+        <div class="social-label">REDES SOCIAIS</div>
 
-  <a href="https://www.instagram.com/validarconsultoria/" target="_blank" aria-label="Instagram">
-    <i class="bi bi-instagram" style="font-size: 24px;"></i>
-  </a>
+        <a href="https://www.instagram.com/validarconsultoria/" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram" style="font-size: 24px;"></i>
+        </a>
 
-  <a href="https://api.whatsapp.com/send/?phone=5561991117168&text=Gostaria+de+entrar+em+contato+com+um+especialista.&type=phone_number&app_absent=0" target="_blank" aria-label="WhatsApp">
-    <i class="bi bi-whatsapp" style="font-size: 24px;"></i>
-  </a>
+        <a href="https://api.whatsapp.com/send/?phone=5561991117168&text=Gostaria+de+entrar+em+contato+com+um+especialista.&type=phone_number&app_absent=0"
+            target="_blank" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp" style="font-size: 24px;"></i>
+        </a>
 
-  <a href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/" target="_blank" aria-label="LinkedIn">
-    <i class="bi bi-linkedin" style="font-size: 24px;"></i>
-  </a>
-</div>
+        <a href="https://www.linkedin.com/company/validar-consultoria-empresarial-administrativa-e-financeira/"
+            target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin" style="font-size: 24px;"></i>
+        </a>
+    </div>
 
 </footer>
 
