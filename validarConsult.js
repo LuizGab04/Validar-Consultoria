@@ -24,7 +24,7 @@ function updatePositions() {
     slide.classList.toggle("active", isActive);
 
     // aplica rotação e zoom no ativo
-    const scale = isActive ? 1.5 : 1;
+    const scale = isActive ? 1.3 : 1;
     slide.style.transform = `translateY(-50%) rotate(${angle}deg) scale(${scale})`;
   });
 }

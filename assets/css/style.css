@@ -4,6 +4,17 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+#emailHeader a,
+.btn,
+#contato label {
+  font-family: "League Spartan", sans-serif;
+}
+
 /* =================== SLIDESHOW =================== */
 /* section do sol (semicírculo) */
 .slideshow {
