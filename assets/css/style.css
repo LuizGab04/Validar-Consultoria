@@ -1,5 +1,6 @@
 /* GERAL: evita rolagem horizontal em qualquer tela */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -8,7 +9,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 #emailHeader a,
 .btn,
 #contato label {
@@ -27,13 +33,13 @@ h1, h2, h3, h4, h5, h6,
   overflow: hidden;
   position: relative;
   width: 100%;
-  
-  
-  
-  
+
+
+
+
 }
 
-.fundocarrossel{
+.fundocarrossel {
   background: linear-gradient(to bottom, #000, #0d0d40 80%);
 }
 
@@ -78,28 +84,29 @@ h1, h2, h3, h4, h5, h6,
   object-fit: cover;
   border-radius: 50%;
 }
+
 .slide-text {
-    height: 105px;
-    border-radius: 40px;
-    background-color: #d1d1d1;
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    margin-left: -7rem;
-    transform: translateY(-50%);
-    width: calc(100% - -410px);
-    font-size: 10px;
-    font-weight: bold;
-    color: #000;
-    opacity: 0;
-    transition: opacity 0.4s;
-    z-index: -1;
-    text-align: center;
-    
+  height: 105px;
+  border-radius: 40px;
+  background-color: #d1d1d1;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-left: -7rem;
+  transform: translateY(-50%);
+  width: calc(100% - -410px);
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+  text-align: center;
+
 
 }
 
-.texto{
+.texto {
   margin-left: 120px;
 }
 
@@ -294,6 +301,7 @@ footer {
   font-size: 14px;
   color: #fff;
 }
+
 .parceria-item.active {
   opacity: 1;
 }
@@ -328,11 +336,13 @@ footer {
   /* HEADER */
   #cabecalho {
     padding: 10px 12px !important;
-    flex-wrap: wrap;                 /* deixa quebrar linha se precisar */
+    flex-wrap: wrap;
+    /* deixa quebrar linha se precisar */
   }
 
   #logo-container img {
-    height: 40px !important;         /* logo um pouco menor */
+    height: 40px !important;
+    /* logo um pouco menor */
   }
 
   #emailHeader {
@@ -344,9 +354,10 @@ footer {
     font-size: 14px !important;
   }
 
-    /* HERO */
+  /* HERO */
   #hero {
-    flex-direction: column;           /* empilha texto + imagem */
+    flex-direction: column;
+    /* empilha texto + imagem */
     align-items: flex-start;
     padding: 20px 16px 40px !important;
     gap: 20px !important;
@@ -402,7 +413,8 @@ footer {
   .parcerias-wrapper {
     max-width: 100%;
     padding: 0 8px;
-    gap: 8px;                 /* seta – logo – seta mais juntinhos */
+    gap: 8px;
+    /* seta – logo – seta mais juntinhos */
     align-items: center;
   }
 
@@ -419,7 +431,8 @@ footer {
   }
 
   .parceria-item {
-    height: 70px;             /* caixinha da logo */
+    height: 70px;
+    /* caixinha da logo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -435,17 +448,17 @@ footer {
   /* logo central ainda destaca, mas sem explodir pra fora */
   .parceria-item.active img {
     transform: scale(1.08);
-    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
   }
 
   .parcerias-arrow {
     width: 28px;
     height: 28px;
     font-size: 15px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  } 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
 
-   #contato .container {
+  #contato .container {
     padding-inline: 16px;
   }
 
@@ -476,7 +489,7 @@ footer {
     font-size: 14px;
   }
 
-   footer {
+  footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
